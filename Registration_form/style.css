@@ -1,0 +1,48 @@
+ body {
+  background-color: lightblue;
+}
+
+table {
+  border-spacing: 15px;
+}
+td{
+	padding: 5px;
+}
+header{
+	background: black;
+	
+	padding: 5px 0px 12px 0px;
+	height: 40px;
+}
+header h1{
+	display: inline;
+	font-family: 'Oswald', sans-serif;
+	
+
+}
+
+nav ul li{
+	display: inline-block;
+	
+	margin-left: 12px;
+
+}
+nav ul li a{
+	color: white;
+	text-decoration: none;
+
+}
+.button {
+    background-color: #4CAF50;
+    font-size: 20px;
+    height: 35px;
+    width: 150px;
+	border-radius: 8px;}
+.heading{
+	font-size: 30px;
+	color: green;
+}
+input[type=text],[type=password],[type=email]{
+ border-radius: 4px;
+ width: 200px;
+}
