@@ -16,6 +16,7 @@ public class DBConnector {
 	String[] locationName = { "hyderabad", "bangalore", "mumbai", "chandigarh", "chennai" };
 	public  List<String> locations = Arrays.asList(locationName);
 
+
 	String[] MoviesName = { "sahoo", "war", "avengers", "saira", "joker" };
 	private List<String> hyderabadMovies = Arrays.asList(MoviesName);
     private List<String> bangaloreMovies = Arrays.asList(MoviesName);
