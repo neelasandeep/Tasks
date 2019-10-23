@@ -3,7 +3,8 @@ package booking_process;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 import java.util.logging.Logger;
 import book_ticket.DataAccess;
@@ -43,6 +44,7 @@ public class TicketBooking {
 		ticket.setMovieName(selctMovie());
 
 		ticket.setTheater(selectTheater());
+	     ticket.setDate(selectDate());
 
 		ticket.setTime(selectShowTime());
 		selectSeats();
@@ -76,13 +78,21 @@ public class TicketBooking {
 		return input.readLine().toLowerCase();
 
 	}
+	private String selectDate() throws IOException {
+		Calendar calendar = Calendar.getInstance();
+		for(int date=0;date<5;date++) {
+			 calendar.add(Calendar.DAY_OF_YEAR, 1);
+			 logger.info(new SimpleDateFormat("yyyy-MM-dd").format(calendar.getTime()).toString());
+			 
+		}
+		
+		return input.readLine();
+	}
 
 	private static String selectShowTime() throws IOException {
 		logger.info("Select show timing:");
 		ticket.setScreen(locationDB.showTimings(ticket));
-		return  input.readLine();
-		
-	
+		return input.readLine();
 
 	}
 

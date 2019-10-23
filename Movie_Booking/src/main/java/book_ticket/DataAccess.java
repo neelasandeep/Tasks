@@ -14,6 +14,14 @@ public class DataAccess {
 	private int luxaryTickts;
 	private int premiumTicket;
 	private int bookingId;
+    private String date;
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
 
 	public String getScreen() {
 		return screen;
@@ -24,7 +32,7 @@ public class DataAccess {
 	}
 
 	private String screen;
-	String date = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
+	
 
 	public int getBookingId() {
 		return bookingId;
