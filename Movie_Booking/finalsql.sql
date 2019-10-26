@@ -104,7 +104,7 @@ CREATE TABLE `seat_details` (
   `showtime` varchar(10) NOT NULL,
   `booking_id` varchar(40) NOT NULL,
   PRIMARY KEY (`sno`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -113,7 +113,7 @@ CREATE TABLE `seat_details` (
 
 LOCK TABLES `seat_details` WRITE;
 /*!40000 ALTER TABLE `seat_details` DISABLE KEYS */;
-INSERT INTO `seat_details` VALUES (1,'2019-10-29','pvrm','screen-3','a1-a2-a3','9.00','592581'),(2,'2019-10-29','pvrm','screen-3','a4-a5','9.00','289742'),(3,'2019-10-29','pvrm','screen-3','e5','9.00','243074'),(4,'2019-10-29','pvrm','screen-3','f1','9.00','668437'),(5,'2019-10-29','pvrm','screen-3','g3','9.00','609131');
+INSERT INTO `seat_details` VALUES (1,'2019-10-29','pvrm','screen-3','a1-a2-a3','9.00','592581'),(2,'2019-10-29','pvrm','screen-3','a4-a5','9.00','289742'),(3,'2019-10-29','pvrm','screen-3','e5','9.00','243074'),(4,'2019-10-29','pvrm','screen-3','f1','9.00','668437'),(5,'2019-10-29','pvrm','screen-3','g3','9.00','609131'),(6,'2019-10-29','pvrm','screen-3','h3-i5-d3','9.00','516456'),(7,'2019-10-29','svck','screen-3','a1-a2-a3','8.00','664947'),(8,'2019-10-29','svck','screen-3','a4-f3','8.00','238306'),(9,'2019-10-29','pvrm','screen-3','i3-i7','9.00','637290'),(10,'2019-10-30','agcm','screen-3','a1-a2-g5','10.00','964605'),(11,'2019-11-01','crng','screen-3','a1-c2-i3','11.00','963049');
 /*!40000 ALTER TABLE `seat_details` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -185,4 +185,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-27  0:28:36
+-- Dump completed on 2019-10-27  2:36:09
