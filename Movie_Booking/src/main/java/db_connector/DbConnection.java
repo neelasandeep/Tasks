@@ -10,12 +10,12 @@ import org.apache.log4j.Logger;
 
 
 public class DbConnection {
-	private static Connection con = null;
+	private  Connection con=null;
 	private static String username = "root";
 	private static String pwd = "root";
 	private static Logger logger = Logger.getLogger(DbConnection.class.getName());
 	public static DbConnection object;
-	private DbConnection() {}
+	
 	public static DbConnection getDbInstance() {
 		if (object == null) {
 			synchronized (DbConnection.class) {

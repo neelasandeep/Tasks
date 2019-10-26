@@ -16,7 +16,7 @@ public class BookedTicket implements TicketData {
 	}
 
 	public int generateBookingId() {
-		Random randomNumber = new Random();
-		return 100000 + randomNumber.nextInt(900000);
+		
+		return 100000 +  new Random().nextInt(900000);
 	}
 }

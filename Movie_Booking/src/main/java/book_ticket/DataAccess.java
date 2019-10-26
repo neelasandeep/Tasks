@@ -14,14 +14,14 @@ public class DataAccess {
 	private int premiumTicket;
 	private int bookingId;
     private String date;
-    private String seat_no;
+    private String seatno;
     
-	public String getSeat_no() {
-		return seat_no;
+	public String getSeatNo() {
+		return seatno;
 	}
 
-	public void setSeat_no(String seat_no) {
-		this.seat_no = seat_no;
+	public void setSeatNo(String seatno) {
+		this.seatno = seatno;
 	}
 
 	public String getDate() {
@@ -131,7 +131,7 @@ public class DataAccess {
 	@Override
 	public String toString() {
 		return "-------Summury of Booking Details----------\n" + "Booking id\t\t" + getBookingId()
-				+ "\nNo of Tickets Booked\t " + getNoOfTickets() + "\nseat_no\t\t\t" + getSeat_no() +"\ntype\t\t\t" + getType() + "\nPremium tickets\t\t"
+				+ "\nNo of Tickets Booked\t " + getNoOfTickets() + "\nseat_no\t\t\t" + getSeatNo() +"\ntype\t\t\t" + getType() + "\nPremium tickets\t\t"
 				+ getPremiumTicket() + "" + "\n Luxary Tickets\t\t" + getLuxaryTickts() + "\n Movie Name\t\t"
 				+ getMovieName() + " \n" + "Theater Name \t\t" + getTheater() + " \n" + "Screen\t\t\t" + getScreen()
 				+ "\n"+"Time\t\t\t" + getTime() + " \n" + "Date\t\t\t" + date + "\nYour total cost is\t " + getTotalCost()
