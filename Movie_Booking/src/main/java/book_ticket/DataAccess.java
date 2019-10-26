@@ -1,7 +1,6 @@
 package book_ticket;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 
 public class DataAccess {
 
@@ -15,6 +14,16 @@ public class DataAccess {
 	private int premiumTicket;
 	private int bookingId;
     private String date;
+    private String seat_no;
+    
+	public String getSeat_no() {
+		return seat_no;
+	}
+
+	public void setSeat_no(String seat_no) {
+		this.seat_no = seat_no;
+	}
+
 	public String getDate() {
 		return date;
 	}
@@ -59,15 +68,9 @@ public class DataAccess {
 	}
 
 	private int totalCost;
-	private int totalseats = 100;
+	
 
-	public int getTotalseats() {
-		return totalseats;
-	}
-
-	public void setTotalseats(int totalseats) {
-		this.totalseats = totalseats;
-	}
+	
 
 	public String getLocation() {
 		return location;
@@ -128,7 +131,7 @@ public class DataAccess {
 	@Override
 	public String toString() {
 		return "-------Summury of Booking Details----------\n" + "Booking id\t\t" + getBookingId()
-				+ "\nNo of Tickets Booked\t " + getNoOfTickets() + "\ntype\t\t\t" + getType() + "\nPremium tickets\t\t"
+				+ "\nNo of Tickets Booked\t " + getNoOfTickets() + "\nseat_no\t\t\t" + getSeat_no() +"\ntype\t\t\t" + getType() + "\nPremium tickets\t\t"
 				+ getPremiumTicket() + "" + "\n Luxary Tickets\t\t" + getLuxaryTickts() + "\n Movie Name\t\t"
 				+ getMovieName() + " \n" + "Theater Name \t\t" + getTheater() + " \n" + "Screen\t\t\t" + getScreen()
 				+ "\n"+"Time\t\t\t" + getTime() + " \n" + "Date\t\t\t" + date + "\nYour total cost is\t " + getTotalCost()

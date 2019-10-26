@@ -1,13 +1,14 @@
 package book_ticket;
 
 import java.io.IOException;
-import java.util.logging.Logger;
+
+import org.apache.log4j.Logger;
 
 import booking_process.TicketBooking;
 
 public class UserRunner {
 
-	static Logger logger = Logger.getLogger(UserRunner.class.getName());
+	 static Logger logger = Logger.getLogger(UserRunner.class);
 
 	public static void main(String[] args) throws IOException {
 
@@ -19,6 +20,9 @@ public class UserRunner {
 		BookedTicket finalTicket = new BookedTicket();
 		DataAccess ticket = ticketBooking.getTicket();
 		finalTicket.saveTicketData(ticket);
+		TicketBooking.setSeatDetails();
+		
+		
 
 	}
 

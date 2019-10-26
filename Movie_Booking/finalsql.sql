@@ -16,29 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `booking_dates`
---
-
-DROP TABLE IF EXISTS `booking_dates`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `booking_dates` (
-  `dates` date NOT NULL,
-  PRIMARY KEY (`dates`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `booking_dates`
---
-
-LOCK TABLES `booking_dates` WRITE;
-/*!40000 ALTER TABLE `booking_dates` DISABLE KEYS */;
-INSERT INTO `booking_dates` VALUES ('2017-06-16'),('2019-10-23'),('2019-10-24'),('2019-10-25');
-/*!40000 ALTER TABLE `booking_dates` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `locations`
 --
 
@@ -119,13 +96,15 @@ DROP TABLE IF EXISTS `seat_details`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `seat_details` (
-  `date` date NOT NULL,
+  `sno` int(11) NOT NULL AUTO_INCREMENT,
+  `booking_date` date NOT NULL,
   `theater_id` varchar(7) NOT NULL,
-  `screen_no` varchar(9) NOT NULL,
+  `sccreen_no` varchar(9) NOT NULL,
   `seat_no` varchar(40) NOT NULL,
-  `time` varchar(10) NOT NULL,
-  `booking_id` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `showtime` varchar(10) NOT NULL,
+  `booking_id` varchar(40) NOT NULL,
+  PRIMARY KEY (`sno`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -134,6 +113,7 @@ CREATE TABLE `seat_details` (
 
 LOCK TABLES `seat_details` WRITE;
 /*!40000 ALTER TABLE `seat_details` DISABLE KEYS */;
+INSERT INTO `seat_details` VALUES (1,'2019-10-29','pvrm','screen-3','a1-a2-a3','9.00','592581'),(2,'2019-10-29','pvrm','screen-3','a4-a5','9.00','289742'),(3,'2019-10-29','pvrm','screen-3','e5','9.00','243074'),(4,'2019-10-29','pvrm','screen-3','f1','9.00','668437'),(5,'2019-10-29','pvrm','screen-3','g3','9.00','609131');
 /*!40000 ALTER TABLE `seat_details` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -205,4 +185,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-24  0:51:50
+-- Dump completed on 2019-10-27  0:28:36
