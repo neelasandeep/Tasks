@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import book_ticket.BookedTicket;
 import book_ticket.DataAccess;
 import db_connector.DbOperations;
+import db_connector.UserInformationDO;
 
 public class TicketBooking {
 	private TicketBooking() {
@@ -53,6 +54,7 @@ public class TicketBooking {
 		BookedTicket finalTicket = new BookedTicket();
 		finalTicket.saveTicketData(ticket);
 		setSeatDetails();
+		new UserInformationDO().storeUserInfo(ticket);
 
 	}
 
@@ -60,7 +62,7 @@ public class TicketBooking {
 		return ticket;
 	}
 
-	public static String getLocationName() throws IOException {
+	public static  String getLocationName() throws IOException {
 		logger.info("Select Your prefered Location:");
 		locationDB.getLocations();
 		return input.readLine().toLowerCase();
