@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Test-method Suite]" parallel="methods">
+  <listeners>
+    <listener class-name="calculatorTest.Listenerclass"/>
+  </listeners>
+  <test thread-count="2" name="Test(failed)" parallel="methods">
+    <groups>
+      <run>
+        <include name="Arithmetic"/>
+        <include name="Doublesum"/>
+        <include name="Doubletg"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="calculatorTest.TestCalculator">
+        <methods>
+          <include name="DivideByZero"/>
+          <include name="setUp"/>
+          <include name="div" invocation-numbers="5 6 7 8 9"/>
+          <include name="pow" invocation-numbers="5 6 7 8 9"/>
+          <include name="sum" invocation-numbers="5 6 7 8 9"/>
+          <include name="sqrt" invocation-numbers="5 6 7 8 9"/>
+          <include name="mult" invocation-numbers="5 6 7 8 9"/>
+          <include name="sub" invocation-numbers="5 6 7 8 9"/>
+          <include name="tg" invocation-numbers="5 6 7 8 9"/>
+        </methods>
+      </class> <!-- calculatorTest.TestCalculator -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Test-method Suite] -->

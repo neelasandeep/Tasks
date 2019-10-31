@@ -1,7 +1,9 @@
 package book_ticket;
 
 import java.util.Random;
-import java.util.logging.Logger;
+
+import org.apache.log4j.Logger;
+
 
 
 
