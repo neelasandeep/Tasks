@@ -15,15 +15,16 @@ public class Testclass {
 	ArrayList<ArrayList<String>> dataObject;
 	Calculator calculator;
 	SoftAssert softAssert;
+
 	ArrayList<String> data;
 	String[] dataItem;
 	@BeforeMethod(alwaysRun = true)
 	public void setUp() throws IOException {
 		calculator = new Calculator();
 		dataObject = new Util2().readXls();
+		
 	 softAssert=new SoftAssert();
 	}
-
 	@Test(groups = "Doublesum")
 	public void sum() {
 		

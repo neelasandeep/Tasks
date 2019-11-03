@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="7" passed="2" failed="5" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-10-31T23:34:24 IST" name="Default suite" finished-at="2019-10-31T23:34:26 IST" duration-ms="1435">
+  <suite started-at="2019-11-03T14:18:21 IST" name="Default suite" finished-at="2019-11-03T14:18:23 IST" duration-ms="1295">
     <groups>
       <group name="Doublesum">
         <method signature="Testclass.sum()[pri:0, instance:testNg.Testclass@a1cdc6d]" name="sum" class="testNg.Testclass"/>
@@ -16,13 +16,13 @@
         <method signature="Testclass.sub()[pri:0, instance:testNg.Testclass@a1cdc6d]" name="sub" class="testNg.Testclass"/>
       </group> <!-- Arithmetic -->
     </groups>
-    <test started-at="2019-10-31T23:34:24 IST" name="Default test" finished-at="2019-10-31T23:34:26 IST" duration-ms="1435">
+    <test started-at="2019-11-03T14:18:21 IST" name="Default test" finished-at="2019-11-03T14:18:23 IST" duration-ms="1295">
       <class name="testNg.Testclass">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:24 IST" name="setUp" finished-at="2019-10-31T23:34:25 IST" duration-ms="811" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:21 IST" name="setUp" finished-at="2019-11-03T14:18:22 IST" duration-ms="735" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="DivideByZero()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:25 IST" name="DivideByZero" finished-at="2019-10-31T23:34:25 IST" duration-ms="5" status="PASS">
+        <test-method signature="DivideByZero()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:22 IST" name="DivideByZero" finished-at="2019-11-03T14:18:22 IST" duration-ms="7" status="PASS">
           <exception class="java.lang.NumberFormatException">
             <message>
               <![CDATA[Attempt to divide by zero]]>
@@ -65,11 +65,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DivideByZero -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:25 IST" name="setUp" finished-at="2019-10-31T23:34:25 IST" duration-ms="88" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:22 IST" name="setUp" finished-at="2019-11-03T14:18:22 IST" duration-ms="83" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="mult()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:25 IST" name="mult" finished-at="2019-10-31T23:34:25 IST" duration-ms="9" status="FAIL">
+        <test-method signature="mult()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:22 IST" name="mult" finished-at="2019-11-03T14:18:22 IST" duration-ms="9" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
@@ -143,11 +143,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mult -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:25 IST" name="setUp" finished-at="2019-10-31T23:34:25 IST" duration-ms="116" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:22 IST" name="setUp" finished-at="2019-11-03T14:18:22 IST" duration-ms="70" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="pow()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:25 IST" name="pow" finished-at="2019-10-31T23:34:25 IST" duration-ms="3" status="FAIL">
+        <test-method signature="pow()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:22 IST" name="pow" finished-at="2019-11-03T14:18:22 IST" duration-ms="3" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
@@ -223,11 +223,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pow -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:25 IST" name="setUp" finished-at="2019-10-31T23:34:25 IST" duration-ms="59" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:22 IST" name="setUp" finished-at="2019-11-03T14:18:22 IST" duration-ms="66" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="sqrt()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:25 IST" name="sqrt" finished-at="2019-10-31T23:34:25 IST" duration-ms="8" status="FAIL">
+        <test-method signature="sqrt()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:22 IST" name="sqrt" finished-at="2019-11-03T14:18:22 IST" duration-ms="3" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
@@ -305,11 +305,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sqrt -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:25 IST" name="setUp" finished-at="2019-10-31T23:34:25 IST" duration-ms="57" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:22 IST" name="setUp" finished-at="2019-11-03T14:18:22 IST" duration-ms="52" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="sub()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:25 IST" name="sub" finished-at="2019-10-31T23:34:25 IST" duration-ms="8" status="FAIL">
+        <test-method signature="sub()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:22 IST" name="sub" finished-at="2019-11-03T14:18:22 IST" duration-ms="5" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
@@ -383,11 +383,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sub -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:25 IST" name="setUp" finished-at="2019-10-31T23:34:25 IST" duration-ms="75" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:22 IST" name="setUp" finished-at="2019-11-03T14:18:22 IST" duration-ms="93" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="sum()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:25 IST" name="sum" finished-at="2019-10-31T23:34:26 IST" duration-ms="3" status="FAIL">
+        <test-method signature="sum()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:22 IST" name="sum" finished-at="2019-11-03T14:18:22 IST" duration-ms="6" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
@@ -461,11 +461,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sum -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:26 IST" name="setUp" finished-at="2019-10-31T23:34:26 IST" duration-ms="73" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:22 IST" name="setUp" finished-at="2019-11-03T14:18:23 IST" duration-ms="65" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="div()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-10-31T23:34:26 IST" name="div" finished-at="2019-10-31T23:34:26 IST" depends-on-methods="testNg.Testclass.DivideByZero" duration-ms="2" status="PASS">
+        <test-method signature="div()[pri:0, instance:testNg.Testclass@a1cdc6d]" started-at="2019-11-03T14:18:23 IST" name="div" finished-at="2019-11-03T14:18:23 IST" depends-on-methods="testNg.Testclass.DivideByZero" duration-ms="3" status="PASS">
           <exception class="java.lang.NumberFormatException">
             <message>
               <![CDATA[For input string: "1d/0d"]]>

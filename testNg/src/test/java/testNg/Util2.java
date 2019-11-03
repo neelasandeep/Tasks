@@ -1,11 +1,8 @@
 package testNg;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -44,7 +41,7 @@ public class Util2 {
     	}
     	
     	
-    	System.out.println(line);
+    	
     	data.add(line);
     	line="";
     	}
@@ -64,7 +61,5 @@ public class Util2 {
     
      return dataObjects;
 	}
-	public static void main(String[] args) throws IOException {
-		new Util2().readXls();
-	}
+	
 }
