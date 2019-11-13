@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="seleniumTasks.ChallengingDom">
+      <class name="seleniumTasks.FramesExample">
         <methods>
-          <include name="challengingDom"/>
+          <include name="notification"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- seleniumTasks.ChallengingDom -->
+      </class> <!-- seleniumTasks.FramesExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
