@@ -1,21 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-11-15T00:34:20 IST" name="Default suite" finished-at="2019-11-15T00:35:37 IST" duration-ms="77297">
+  <suite started-at="2019-11-17T22:43:53 IST" name="Default suite" finished-at="2019-11-17T22:48:18 IST" duration-ms="265874">
     <groups>
     </groups>
-    <test started-at="2019-11-15T00:34:20 IST" name="Default test" finished-at="2019-11-15T00:35:37 IST" duration-ms="77297">
-      <class name="com.epam.seleniumHomeTask_2.MakeMyTripFactory">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.epam.seleniumHomeTask_2.MakeMyTripFactory@3541cb24]" started-at="2019-11-15T00:34:20 IST" name="setup" finished-at="2019-11-15T00:34:30 IST" duration-ms="10068" status="PASS">
+    <test started-at="2019-11-17T22:43:53 IST" name="Default test" finished-at="2019-11-17T22:48:18 IST" duration-ms="265874">
+      <class name="com.epam.makeMytripTests.MakeMyTripFactory">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:43:52 IST" name="setupSuite" finished-at="2019-11-17T22:43:53 IST" duration-ms="1001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:43:53 IST" name="setup" finished-at="2019-11-17T22:44:06 IST" duration-ms="13587" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="checkBrokenLinks()[pri:0, instance:com.epam.seleniumHomeTask_2.MakeMyTripFactory@3541cb24]" started-at="2019-11-15T00:34:30 IST" name="checkBrokenLinks" finished-at="2019-11-15T00:35:37 IST" duration-ms="67091" status="PASS">
+        <test-method signature="TestMakeMyTripNavBar()[pri:1, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:44:06 IST" name="TestMakeMyTripNavBar" finished-at="2019-11-17T22:44:38 IST" duration-ms="32231" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkBrokenLinks -->
-      </class> <!-- com.epam.seleniumHomeTask_2.MakeMyTripFactory -->
+        </test-method> <!-- TestMakeMyTripNavBar -->
+        <test-method is-config="true" signature="ScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:44:38 IST" name="ScreenShotOnFailure" finished-at="2019-11-17T22:44:39 IST" duration-ms="791" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestMakeMyTripNavBar status=SUCCESS method=MakeMyTripFactory.TestMakeMyTripNavBar()[pri:1, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenShotOnFailure -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:44:39 IST" name="tearDown" finished-at="2019-11-17T22:44:40 IST" duration-ms="1030" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:44:40 IST" name="setup" finished-at="2019-11-17T22:44:56 IST" duration-ms="15780" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="checkBrokenLinksInFooter()[pri:2, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:44:56 IST" name="checkBrokenLinksInFooter" finished-at="2019-11-17T22:46:41 IST" duration-ms="104916" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkBrokenLinksInFooter -->
+        <test-method is-config="true" signature="ScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:46:41 IST" name="ScreenShotOnFailure" finished-at="2019-11-17T22:46:41 IST" duration-ms="460" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkBrokenLinksInFooter status=SUCCESS method=MakeMyTripFactory.checkBrokenLinksInFooter()[pri:2, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenShotOnFailure -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:46:41 IST" name="tearDown" finished-at="2019-11-17T22:46:42 IST" duration-ms="690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:46:42 IST" name="setup" finished-at="2019-11-17T22:46:56 IST" duration-ms="14150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="checckFlights()[pri:3, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:46:56 IST" name="checckFlights" finished-at="2019-11-17T22:47:27 IST" duration-ms="30727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checckFlights -->
+        <test-method is-config="true" signature="ScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:47:27 IST" name="ScreenShotOnFailure" finished-at="2019-11-17T22:47:27 IST" duration-ms="500" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checckFlights status=SUCCESS method=MakeMyTripFactory.checckFlights()[pri:3, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenShotOnFailure -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:47:27 IST" name="tearDown" finished-at="2019-11-17T22:47:28 IST" duration-ms="766" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:47:28 IST" name="setup" finished-at="2019-11-17T22:47:42 IST" duration-ms="13401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="checkOutHotels()[pri:4, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:47:42 IST" name="checkOutHotels" finished-at="2019-11-17T22:48:17 IST" duration-ms="35538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOutHotels -->
+        <test-method is-config="true" signature="ScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:48:17 IST" name="ScreenShotOnFailure" finished-at="2019-11-17T22:48:18 IST" duration-ms="451" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkOutHotels status=SUCCESS method=MakeMyTripFactory.checkOutHotels()[pri:4, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScreenShotOnFailure -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.epam.makeMytripTests.MakeMyTripFactory@770d3326]" started-at="2019-11-17T22:48:18 IST" name="tearDown" finished-at="2019-11-17T22:48:18 IST" duration-ms="796" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.epam.makeMytripTests.MakeMyTripFactory -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

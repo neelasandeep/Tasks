@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.epam.seleniumHomeTask_2.MakeMyTripFactory">
+      <class name="com.epam.makeMytripTests.MakeMyTripFactory">
         <methods>
-          <include name="checkBrokenLinks"/>
+          <include name="ScreenShotOnFailure"/>
           <include name="setup"/>
+          <include name="TestMakeMyTripNavBar"/>
+          <include name="tearDown"/>
+          <include name="setupSuite"/>
         </methods>
-      </class> <!-- com.epam.seleniumHomeTask_2.MakeMyTripFactory -->
+      </class> <!-- com.epam.makeMytripTests.MakeMyTripFactory -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
