@@ -3,11 +3,9 @@ package com.epam.makeMytripTests;
 import java.util.List;
 
 import org.testng.Assert;
-import org.testng.annotations.Ignore;
+
 import org.testng.annotations.Test;
 
-import com.epam.Utilities.BrowserFactory;
-import com.epam.Utilities.ConfigDataprovider;
 import com.epam.makeMytriptestcasesPages.BaseClass;
 import com.epam.makeMytriptestcasesPages.FlightsFilterPage;
 
@@ -77,15 +75,16 @@ public class MakeMyTripFactory extends BaseClass {
 		loggerextent = extentreport.createTest("checking Hotels");
 		hotelPage.checkoutHotels(urlString, personal);
 	}
+
 	@Test
-	public void checkingInDeals() throws InterruptedException{
+	public void checkingInDeals() throws InterruptedException {
 		loggerextent = extentreport.createTest("checking Deals");
 		urlString = excel.getStringData(5);
-		 homePage.checkMoreOptions("deals");
-		 driver=checkDeals.SearchInDeals(urlString);
-		 urlString = excel.getStringData(2);
-		 filterPage = new FlightsFilterPage(driver);
-			filterPage.applyFilters(urlString);
+		homePage.checkMoreOptions("deals");
+		driver = checkDeals.SearchInDeals(urlString);
+		urlString = excel.getStringData(2);
+		filterPage = new FlightsFilterPage(driver);
+		filterPage.applyFilters(urlString);
 	}
 
 }

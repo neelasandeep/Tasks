@@ -5,14 +5,12 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.Dimension;
 
 public class HotelBookingPage extends BaseClass {
 	WebDriver driver;
@@ -53,7 +51,7 @@ public class HotelBookingPage extends BaseClass {
 			MakeMytripFlightsPage.waitForAD("webklipper-publisher-widget-container-notification-frame",
 					"//a[@id='webklipper-publisher-widget-container-notification-close-div']");
 		} catch (Exception e) {
-		
+
 			System.out.println("no rame proceed");
 		}
 		personal = personaldata;
@@ -115,7 +113,7 @@ public class HotelBookingPage extends BaseClass {
 				Thread.sleep(1000);
 			}
 		} catch (Exception e) {
-			
+
 			System.out.println("Yo can proceed");
 		}
 		System.out.println("wow its displayed");
@@ -145,16 +143,15 @@ public class HotelBookingPage extends BaseClass {
 		}
 	}
 
-
 	public void fillPersonalData() {
 		String[] personalinfo = personal.get(0).split("%");
 		if (progressBar.getText().equals("2")) {
-		driver.findElement(By.xpath("//input[@placeholder='Enter First Name']")).sendKeys(personalinfo[0]);
-		driver.findElement(By.xpath("//input[@placeholder='Enter Last Name']")).sendKeys(personalinfo[1]);
-		driver.findElement(By.xpath("//input[@id='email']")).sendKeys(personalinfo[2]);
-		driver.findElement(By.xpath("//input[@id='mNo']")).sendKeys("9876546786");
-		driver.findElement(By.xpath("//a[@class='primaryBtn btnPayNow']")).click();
+			driver.findElement(By.xpath("//input[@placeholder='Enter First Name']")).sendKeys(personalinfo[0]);
+			driver.findElement(By.xpath("//input[@placeholder='Enter Last Name']")).sendKeys(personalinfo[1]);
+			driver.findElement(By.xpath("//input[@id='email']")).sendKeys(personalinfo[2]);
+			driver.findElement(By.xpath("//input[@id='mNo']")).sendKeys("9876546786");
+			driver.findElement(By.xpath("//a[@class='primaryBtn btnPayNow']")).click();
 
-	}
+		}
 	}
 }

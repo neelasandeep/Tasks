@@ -2,21 +2,20 @@ package com.epam.makeMytriptestcasesPages;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.PropertyConfigurator;
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
+
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
+
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.epam.Utilities.BrowserFactory;
 import com.epam.Utilities.ConfigDataprovider;
@@ -34,23 +33,20 @@ public class BaseClass {
 	public CheckingDealsPage checkDeals;
 	public HotelBookingPage hotelPage;
 
-	
-	
 	public void open(String url) {
 		driver.get(url);
-		
 
 	}
-	
+
 	@BeforeMethod
 	public void setup() {
 		driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getappUrl());
 		homePage = new HomePage(driver);
 		flightsPage = new MakeMytripFlightsPage(driver);
-		checkDeals=new CheckingDealsPage(driver);
+		checkDeals = new CheckingDealsPage(driver);
 
 		hotelPage = new HotelBookingPage(driver);
-		
+
 	}
 
 	@AfterMethod

@@ -2,7 +2,7 @@ package com.epam.makeMytriptestcasesPages;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+
 import java.util.function.Function;
 
 import org.apache.log4j.Logger;
@@ -21,12 +21,13 @@ public class MakeMytripFlightsPage {
 	static WebDriver driver;
 	Logger logger = Logger.getLogger(MakeMytripFlightsPage.class);
 
-	public MakeMytripFlightsPage(WebDriver driver) {
-		this.driver = driver;
+	public MakeMytripFlightsPage(WebDriver driver1) {
+		driver = driver1;
 		PageFactory.initElements(driver, this);
 	}
-    static String adframe;
-    static String btn;
+
+	static String adframe;
+	static String btn;
 	@FindBy(xpath = "//input[@id='fromCity']")
 	WebElement From;
 	@FindBy(xpath = "//input[@id='toCity']")
@@ -57,10 +58,12 @@ public class MakeMytripFlightsPage {
 	WebElement travelApplyButton;
 	@FindBy(xpath = "//a[contains(@class,'primaryBtn font24 latoBlack widgetSearchBtn')]")
 	WebElement searchButton;
-    @Step("Chcking Flights")
+
+	@Step("Chcking Flights")
 	public WebDriver checkFlights(List<String> data) throws InterruptedException {
-		
-		waitForAD("webklipper-publisher-widget-container-notification-frame","//a[@id='webklipper-publisher-widget-container-notification-close-div']");
+
+		waitForAD("webklipper-publisher-widget-container-notification-frame",
+				"//a[@id='webklipper-publisher-widget-container-notification-close-div']");
 		for (int i = 0; i < data.size(); i++) {
 			String[] data1 = data.get(i).split("%");
 			From.click();
@@ -75,16 +78,19 @@ public class MakeMytripFlightsPage {
 			WebElement select = driver.findElement(By.xpath("//div[@class='calc60']/p"));
 			select.click();
 			departure.click();
-			SetDate(data1[2],"//div[@class=\"DayPicker-Caption\"]/div","//span[@class='DayPicker-NavButton DayPicker-NavButton--next']","//div[@class='DayPicker-Month'][1]/div[3]/div/div[@role='gridcell'][#]");
+			SetDate(data1[2], "//div[@class=\"DayPicker-Caption\"]/div",
+					"//span[@class='DayPicker-NavButton DayPicker-NavButton--next']",
+					"//div[@class='DayPicker-Month'][1]/div[3]/div/div[@role='gridcell'][#]");
 
 			setPassengers(2, 0, 0, data1[6]);
 			searchButton.click();
-			
+
 		}
 		return driver;
 	}
-    @Step("Setting date")
-	public static void SetDate(String date,String month1,String next ,String datetoPick) throws InterruptedException {
+
+	@Step("Setting date")
+	public static void SetDate(String date, String month1, String next, String datetoPick) throws InterruptedException {
 
 		String datar[] = date.split("-");
 		int day = Integer.parseInt(datar[0]) - 1;
@@ -95,7 +101,7 @@ public class MakeMytripFlightsPage {
 		while (true) {
 
 			text = driver.findElement(By.xpath(month1)).getText();
-			System.out.println(text+"mine");
+			System.out.println(text + "mine");
 			String datenew[] = text.split(" ");
 			System.out.println();
 			text = datenew[0].substring(0, 3).toUpperCase() + " " + datenew[1];
@@ -108,12 +114,12 @@ public class MakeMytripFlightsPage {
 
 		}
 		Thread.sleep(2000);
-		String[] daypath=datetoPick.split("#");
-		driver.findElement(By.xpath( daypath[0]+ day + daypath[1]))
-				.click();
-		
+		String[] daypath = datetoPick.split("#");
+		driver.findElement(By.xpath(daypath[0] + day + daypath[1])).click();
+
 	}
-    @Step("Setting passenger")
+
+	@Step("Setting passenger")
 	private void setPassengers(int adultsCount, int childrenCount, int infantsCount, String travelClass) {
 
 		travellers.click();
@@ -133,22 +139,21 @@ public class MakeMytripFlightsPage {
 		travelClassTypes.get(number).click();
 		travelApplyButton.click();
 	}
-	public static void waitForAD(String frame,String clsBtn) {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)							
-				.withTimeout(Duration.ofSeconds(5)) 			
-				.pollingEvery(Duration.ofSeconds(5)) 			
-				.ignoring(NoSuchElementException.class);
-		adframe=frame;
-		btn=clsBtn;
-		WebElement closeAd = wait.until(new Function<WebDriver, WebElement>(){
-		
-			public WebElement apply(WebDriver driver ) {
+
+	public static void waitForAD(String frame, String clsBtn) {
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(5))
+				.pollingEvery(Duration.ofSeconds(5)).ignoring(NoSuchElementException.class);
+		adframe = frame;
+		btn = clsBtn;
+		WebElement closeAd = wait.until(new Function<WebDriver, WebElement>() {
+
+			public WebElement apply(WebDriver driver) {
 				driver.switchTo().frame(adframe);
 				return driver.findElement(By.xpath(btn));
 			}
 		});
-		if(closeAd!=null) {
-		closeAd.click();
+		if (closeAd != null) {
+			closeAd.click();
 		}
 	}
 

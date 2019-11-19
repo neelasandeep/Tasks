@@ -3,14 +3,11 @@ package com.epam.makeMytripTests;
 import java.util.List;
 
 import org.testng.Assert;
-import org.testng.annotations.Ignore;
+
 import org.testng.annotations.Test;
 
-import com.epam.Utilities.BrowserFactory;
-import com.epam.Utilities.ConfigDataprovider;
 import com.epam.makeMytriptestcasesPages.BaseClass;
 import com.epam.makeMytriptestcasesPages.FlightsFilterPage;
-import com.epam.makeMytriptestcasesPages.MakeMytripFlightsPage;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;

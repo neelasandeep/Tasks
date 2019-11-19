@@ -13,9 +13,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.epam.Utilities.BrowserFactory;
-import com.epam.Utilities.ConfigDataprovider;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
@@ -128,11 +125,10 @@ public class FlightsFilterPage extends BaseClass {
 		return status;
 	}
 
-	public String reviewDetails()throws InterruptedException {
-	     JavascriptExecutor js = (JavascriptExecutor) driver;
+	public String reviewDetails() throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-	js.executeScript("arguments[0].scrollIntoView();", continueToPay);
-	
+		js.executeScript("arguments[0].scrollIntoView();", continueToPay);
 
 		if (driver.findElements(By.xpath("//input[@value='yes']")).size() > 0) {
 			terms.click();
@@ -142,26 +138,25 @@ public class FlightsFilterPage extends BaseClass {
 
 		driver.findElement(By.xpath("//button[@id='review-continue']")).click();
 		Thread.sleep(1000);
-          String url= driver.getCurrentUrl();
-      return url;
+		String url = driver.getCurrentUrl();
+		return url;
 	}
+
 	public void fillUserDetails() throws InterruptedException {
-		
-		
-			adult.click();
 
-			String[] data = personal.get(0).split("%");
+		adult.click();
 
-			Thread.sleep(1000);
-			driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys(data[3]);
-			driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys(data[2]);
-			driver.findElement(By.xpath("//div[@class='collapse in']//label[1]")).click();
-			driver.findElement(By.xpath("//input[@placeholder='Mobile No']")).sendKeys("9515746150");
-			driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys(data[1]);
-			Thread.sleep(2000);
-			driver.findElement(By.xpath("//button[@class='ack-cta btn fli_primary_btn text-uppercase']")).click();
+		String[] data = personal.get(0).split("%");
 
-		}
-	
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys(data[3]);
+		driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys(data[2]);
+		driver.findElement(By.xpath("//div[@class='collapse in']//label[1]")).click();
+		driver.findElement(By.xpath("//input[@placeholder='Mobile No']")).sendKeys("9515746150");
+		driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys(data[1]);
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@class='ack-cta btn fli_primary_btn text-uppercase']")).click();
+
+	}
 
 }

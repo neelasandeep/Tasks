@@ -2,7 +2,7 @@ package com.epam.makeMytripTests;
 
 import java.util.List;
 
-import org.testng.Assert;
+
 import org.testng.annotations.Test;
 
 import com.epam.makeMytriptestcasesPages.BaseClass;
@@ -12,7 +12,9 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
+
 public class HotelPageController extends BaseClass {
+	
 
 	List<String> urlString;
 
@@ -21,6 +23,7 @@ public class HotelPageController extends BaseClass {
 	@Description("Checking Hotels")
 	@Story("Hotel Searching ")
 	public void checkOutHotels() throws InterruptedException {
+		
 		open(config.getappUrl());
 		urlString = excel.getStringData(3);
 		List<String> personal = excel.getStringData(4);

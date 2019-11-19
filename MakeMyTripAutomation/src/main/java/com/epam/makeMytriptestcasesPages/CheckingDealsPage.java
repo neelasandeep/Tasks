@@ -1,21 +1,17 @@
 package com.epam.makeMytriptestcasesPages;
 
-import java.time.Duration;
 import java.util.List;
 import java.util.Set;
-import java.util.function.Function;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 
 public class CheckingDealsPage {
 
@@ -46,15 +42,16 @@ public class CheckingDealsPage {
 	String parentwindow = "";
 	Logger logger = Logger.getLogger(CheckingDealsPage.class);
 
-	public CheckingDealsPage(WebDriver driver) {
+	public CheckingDealsPage(WebDriver driver1) {
 
-		this.driver = driver;
+		driver = driver1;
 		PageFactory.initElements(driver, this);
 
 	}
- public void enterIntoDeals() {
-	 more.click();
-	 parentwindow = driver.getWindowHandle();
+
+	public void enterIntoDeals() {
+		more.click();
+		parentwindow = driver.getWindowHandle();
 		moreOptions.get(3).click();
 		Set<String> allwindow = driver.getWindowHandles();
 
@@ -62,24 +59,24 @@ public class CheckingDealsPage {
 			if (!handle.equals(parentwindow)) {
 				driver.switchTo().window(handle);
 			}
-			}
- }
+		}
+	}
+
 	public WebDriver SearchInDeals(List<String> data) throws InterruptedException {
-		
+
 		String[] data1 = data.get(0).split("%");
 
 		From.sendKeys(data1[0]);
 		Thread.sleep(1000);
 		From.sendKeys(Keys.ENTER);
-		
-		
-		
-		driver.findElement(By.xpath("//div[@class='inputM inputHlp inputFilter']/input[@id='hp-widget__sTo']")).sendKeys(data1[1]);
+
+		driver.findElement(By.xpath("//div[@class='inputM inputHlp inputFilter']/input[@id='hp-widget__sTo']"))
+				.sendKeys(data1[1]);
 		Thread.sleep(1000);
-		driver.findElement(By.xpath("//div[@class='inputM inputHlp inputFilter']/input[@id='hp-widget__sTo']")).sendKeys(Keys.ENTER);
+		driver.findElement(By.xpath("//div[@class='inputM inputHlp inputFilter']/input[@id='hp-widget__sTo']"))
+				.sendKeys(Keys.ENTER);
 		MakeMytripFlightsPage.waitForAD("webklipper-publisher-widget-container-notification-frame",
 				"//div[@id='webklipper-publisher-widget-container-notification-close-div']");
-		
 
 		startdate.click();
 		MakeMytripFlightsPage.SetDate(data1[2], "//div[@class='ui-datepicker-title']",
@@ -97,5 +94,5 @@ public class CheckingDealsPage {
 		return driver;
 
 	}
-	
+
 }
