@@ -2,6 +2,7 @@ package com.epam.makeMytriptestcasesPages;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 import java.util.function.Function;
 
 import org.apache.log4j.Logger;
@@ -37,8 +38,12 @@ public class CheckingDealsPage {
 	List<WebElement> infant;
 	@FindBy(xpath = "//button[@id='searchBtn']")
 	WebElement searchBtn;
-
+	@FindBy(xpath = "//li[@data-cy='menu_More']")
+	WebElement more;
+	@FindBy(xpath = "//li[@data-cy='menu_More']/div/a")
+	List<WebElement> moreOptions;
 	static WebDriver driver;
+	String parentwindow = "";
 	Logger logger = Logger.getLogger(CheckingDealsPage.class);
 
 	public CheckingDealsPage(WebDriver driver) {
@@ -47,7 +52,18 @@ public class CheckingDealsPage {
 		PageFactory.initElements(driver, this);
 
 	}
+ public void enterIntoDeals() {
+	 more.click();
+	 parentwindow = driver.getWindowHandle();
+		moreOptions.get(3).click();
+		Set<String> allwindow = driver.getWindowHandles();
 
+		for (String handle : allwindow) {
+			if (!handle.equals(parentwindow)) {
+				driver.switchTo().window(handle);
+			}
+			}
+ }
 	public WebDriver SearchInDeals(List<String> data) throws InterruptedException {
 		
 		String[] data1 = data.get(0).split("%");

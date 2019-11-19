@@ -15,6 +15,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
+import io.qameta.allure.Step;
+
 public class MakeMytripFlightsPage {
 	static WebDriver driver;
 	Logger logger = Logger.getLogger(MakeMytripFlightsPage.class);
@@ -55,7 +57,7 @@ public class MakeMytripFlightsPage {
 	WebElement travelApplyButton;
 	@FindBy(xpath = "//a[contains(@class,'primaryBtn font24 latoBlack widgetSearchBtn')]")
 	WebElement searchButton;
-
+    @Step("Chcking Flights")
 	public WebDriver checkFlights(List<String> data) throws InterruptedException {
 		
 		waitForAD("webklipper-publisher-widget-container-notification-frame","//a[@id='webklipper-publisher-widget-container-notification-close-div']");
@@ -81,7 +83,7 @@ public class MakeMytripFlightsPage {
 		}
 		return driver;
 	}
-	
+    @Step("Setting date")
 	public static void SetDate(String date,String month1,String next ,String datetoPick) throws InterruptedException {
 
 		String datar[] = date.split("-");
@@ -111,7 +113,7 @@ public class MakeMytripFlightsPage {
 				.click();
 		
 	}
-
+    @Step("Setting passenger")
 	private void setPassengers(int adultsCount, int childrenCount, int infantsCount, String travelClass) {
 
 		travellers.click();
@@ -133,7 +135,7 @@ public class MakeMytripFlightsPage {
 	}
 	public static void waitForAD(String frame,String clsBtn) {
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)							
-				.withTimeout(Duration.ofSeconds(10)) 			
+				.withTimeout(Duration.ofSeconds(5)) 			
 				.pollingEvery(Duration.ofSeconds(5)) 			
 				.ignoring(NoSuchElementException.class);
 		adframe=frame;

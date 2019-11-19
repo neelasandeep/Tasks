@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-
 import org.apache.log4j.Logger;
 
 import org.openqa.selenium.By;
@@ -26,14 +25,14 @@ public class HomePage {
 
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		
+
 	}
 
 	String url = "";
 	String parentwindow = "";
 	@FindBy(xpath = "//nav/ul/li")
 	List<WebElement> Flights;
-	@FindBy(xpath = "//li[@data-cy='menu_More']/a")
+	@FindBy(xpath = "//li[@data-cy='menu_More']")
 	WebElement more;
 	@FindBy(xpath = "//li[@data-cy='menu_More']/div/a")
 	List<WebElement> moreOptions;
@@ -45,9 +44,9 @@ public class HomePage {
 		for (int element = 0; element < Flights.size(); element++) {
 
 			Flights.get(element).click();
-			
+
 			if (element == 8) {
-				urls.add(driver.getCurrentUrl());			
+				urls.add(driver.getCurrentUrl());
 				driver.navigate().back();
 			} else {
 				urls.add(driver.getCurrentUrl());
@@ -59,6 +58,7 @@ public class HomePage {
 	}
 
 	public String checkMoreOptions(String choice) throws InterruptedException {
+
 		more.click();
 
 		if (choice.equalsIgnoreCase("mybiz")) {
@@ -81,9 +81,7 @@ public class HomePage {
 			parentwindow = driver.getWindowHandle();
 			moreOptions.get(3).click();
 			windowHandles();
-			//driver.switchTo().window(parentwindow);
-
-			System.out.println(url);
+			driver.switchTo().window(parentwindow);
 
 		} else if (choice.equalsIgnoreCase("blogs")) {
 			parentwindow = driver.getWindowHandle();
@@ -102,7 +100,7 @@ public class HomePage {
 				driver.switchTo().window(handle);
 
 				url = driver.getCurrentUrl();
-//				driver.close();
+				driver.close();
 			}
 		}
 	}
@@ -121,7 +119,7 @@ public class HomePage {
 	}
 
 	public void checkbrokenlist(List<WebElement> links) {
-		
+
 		for (int link = 0; link < links.size(); link++) {
 			WebElement ele = links.get(link);
 			String url = ele.getAttribute("href");

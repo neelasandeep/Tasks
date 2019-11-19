@@ -32,6 +32,11 @@
     <artifactId>extentreports</artifactId>
     <version>4.0.9</version>
 </dependency>
+	<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <version>2.13.0</version>
+</dependency>
 		
  <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 <dependency>

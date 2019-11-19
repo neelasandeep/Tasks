@@ -30,8 +30,8 @@ public class BrowserFactory {
 			driver = chromeBrowser();
 			break;
 		}
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		driver.get(url);
+       driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
@@ -42,14 +42,14 @@ public class BrowserFactory {
 //		Map<String,Object> prefs=new HashMap<String,Object>();
 //		prefs.put("profile.default_content_setting_values.notifications", 2);
 	ChromeOptions options=new ChromeOptions();
-//		options.addExtensions(new File("C:\\Users\\Sandeep_Neela\\Desktop\\extension_3_61_1_0.crx"));		
-//		
-//		options.merge(capabilities);
+			
+	
+//	options.merge(capabilities);
 		options.addArguments("--disable-popup-blocking");
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+//		DesiredCapabilities capabilities = new DesiredCapabilities();
+//		capabilities.setCapability(ChromeOptions.CAPABILITY, options);
  		
-		driver = new ChromeDriver(capabilities);
+		driver = new ChromeDriver(options);
 		return driver;
 	}
 

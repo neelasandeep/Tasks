@@ -22,6 +22,7 @@ public class HotelBookingPage extends BaseClass {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+
 	List<String> personal;
 	@FindBy(xpath = "//nav/ul/li")
 	List<WebElement> Flights;
@@ -48,8 +49,13 @@ public class HotelBookingPage extends BaseClass {
 	WebElement bokkCombo;
 
 	public void checkoutHotels(List<String> data, List<String> personaldata) throws InterruptedException {
-		MakeMytripFlightsPage.waitForAD("webklipper-publisher-widget-container-notification-frame",
-				"//a[@id='webklipper-publisher-widget-container-notification-close-div']");
+		try {
+			MakeMytripFlightsPage.waitForAD("webklipper-publisher-widget-container-notification-frame",
+					"//a[@id='webklipper-publisher-widget-container-notification-close-div']");
+		} catch (Exception e) {
+		
+			System.out.println("no rame proceed");
+		}
 		personal = personaldata;
 		String[] data1 = data.get(0).split("%");
 		Flights.get(1).click();
@@ -69,17 +75,6 @@ public class HotelBookingPage extends BaseClass {
 		driver.findElement(By.xpath("//button[@data-cy='submitGuest']")).click();
 		driver.findElement(By.xpath("//button[@id='hsw_search_button']")).click();
 		Thread.sleep(2000);
-		if (driver.findElement(By.xpath("//div/a[contains(text(),'SHOW HOTELS')]")).isDisplayed()) {
-			driver.findElement(By.xpath("//div/a[contains(text(),'SHOW HOTELS')]")).click();
-			Thread.sleep(1000);
-			driver.findElement(By.xpath("//body[@class='bodyFixed overlayWholeBlack']")).click();
-			Thread.sleep(1000);
-
-			applyFilters();
-		} else {
-
-			applyFilters();
-		}
 
 	}
 
@@ -111,8 +106,18 @@ public class HotelBookingPage extends BaseClass {
 	}
 
 	public void applyFilters() throws InterruptedException {
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		//js.executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//label[contains(text(),'MMT Assured')]")));
+
+		try {
+			if (driver.findElement(By.xpath("//div/a[contains(text(),'SHOW HOTELS')]")).isDisplayed()) {
+				driver.findElement(By.xpath("//div/a[contains(text(),'SHOW HOTELS')]")).click();
+				Thread.sleep(1000);
+				driver.findElement(By.xpath("//body[@class='bodyFixed overlayWholeBlack']")).click();
+				Thread.sleep(1000);
+			}
+		} catch (Exception e) {
+			
+			System.out.println("Yo can proceed");
+		}
 		System.out.println("wow its displayed");
 		driver.findElement(By.xpath("//label[contains(text(),'MMT Assured')]")).click();
 		Thread.sleep(4000);
@@ -120,31 +125,30 @@ public class HotelBookingPage extends BaseClass {
 		Actions actions = new Actions(driver);
 		actions.dragAndDropBy(slider, +60, 0).perform();
 		Hotels.get(2).click();
-		BookHotel();
 
 	}
 
-	public void BookHotel() {
+	public void ContinueToBookHotel() {
 		String parentwindow = driver.getWindowHandle();
 		Set<String> allwindow = driver.getWindowHandles();
 
 		for (String handle : allwindow) {
 			if (!handle.equals(parentwindow)) {
 				driver.switchTo().window(handle);
-
-				bokkCombo.click();
-
-				if (progressBar.getText().equals("2")) {
-
-					fillPersonalData();
+				if (driver.findElements(By.xpath("//a[@id='detpg_headerright_book_now']")).size() > 0) {
+					driver.findElement(By.xpath("//a[@id='detpg_headerright_book_now']")).click();
 				}
-
+				if (driver.findElements(By.xpath("//span[@id='detpg_book_combo_btn']")).size() > 0) {
+					bokkCombo.click();
+				}
 			}
 		}
 	}
 
+
 	public void fillPersonalData() {
 		String[] personalinfo = personal.get(0).split("%");
+		if (progressBar.getText().equals("2")) {
 		driver.findElement(By.xpath("//input[@placeholder='Enter First Name']")).sendKeys(personalinfo[0]);
 		driver.findElement(By.xpath("//input[@placeholder='Enter Last Name']")).sendKeys(personalinfo[1]);
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys(personalinfo[2]);
@@ -152,5 +156,5 @@ public class HotelBookingPage extends BaseClass {
 		driver.findElement(By.xpath("//a[@class='primaryBtn btnPayNow']")).click();
 
 	}
-
+	}
 }

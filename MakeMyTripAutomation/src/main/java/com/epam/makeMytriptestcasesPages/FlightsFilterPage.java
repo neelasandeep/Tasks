@@ -20,7 +20,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 
-public class FlightsFilterPage extends BaseClass{
+public class FlightsFilterPage extends BaseClass {
 	WebDriver driver;
 	Logger logger = Logger.getLogger(FlightsFilterPage.class);
 
@@ -28,7 +28,7 @@ public class FlightsFilterPage extends BaseClass{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	@FindBy(xpath = "//span[@class=\"filter-arw\"]")
 	WebElement morefilters;
 	@FindBy(xpath = "//div[@class='rc-slider-step']")
@@ -51,7 +51,7 @@ public class FlightsFilterPage extends BaseClass{
 	@FindBy(xpath = "//button[@id='review-continue']")
 	WebElement continueToPay;
 	@FindBy(xpath = "//input[@value='yes']")
-	
+
 	WebElement terms;
 	@FindBy(xpath = "//a[@class='font14 LatoBold text-uppercase paddLR15']")
 	WebElement adult;
@@ -65,7 +65,7 @@ public class FlightsFilterPage extends BaseClass{
 	List<String> personal;
 
 	public void applyFilters(List<String> data) throws InterruptedException {
-		
+
 		personal = data;
 		morefilters.click();
 		Thread.sleep(1000);
@@ -86,67 +86,82 @@ public class FlightsFilterPage extends BaseClass{
 			aftersort.add(Double.parseDouble(price.substring(2, price.length()).replace(",", "")));
 		}
 		Collections.reverse(aftersort);
-
-		proceedToBook(2);
-		
-		
+		System.out.println(aftersort);
+		// proceedToBook(2);
 
 	}
 
-	public void proceedToBook(int flight) throws InterruptedException {
-		//String parentwindow = driver.getWindowHandle();
+	public String proceedToBook(int flight) throws InterruptedException {
+
+		String Status = "NotOk";
 		String deptimeBefore = departureTime.get(flight).getText();
 		String departureTimeOnnextpage;
 		proceedToBook.get(flight).click();
 
 		Set<String> allwindow = driver.getWindowHandles();
-        System.out.println(allwindow.size());
-        int i=0;
-		for (String handle : allwindow) {i++;
-		System.out.println(i);
-			if (!handle.equalsIgnoreCase(driver.getWindowHandle())&&i==allwindow.size()) {
+		System.out.println(allwindow.size());
+		int i = 0;
+		for (String handle : allwindow) {
+			i++;
+			System.out.println(i);
+			if (!handle.equalsIgnoreCase(driver.getWindowHandle()) && i == allwindow.size()) {
 				driver.switchTo().window(handle);
 				departureTimeOnnextpage = departuretimeafter.getText();
-				checkProgressBar(deptimeBefore, departureTimeOnnextpage);
+				System.out.println(departureTimeOnnextpage);
+				if (deptimeBefore.equals(departureTimeOnnextpage)) {
+					Status = "OK";
+				}
 
-			}else {
-				System.out.println("parent"+ " "+i);
+			} else {
+				System.out.println("parent" + " " + i);
 			}
 
 		}
+		return Status;
 	}
 
-	public void checkProgressBar(String beforePageDepTime, String afterPageDepTime) throws InterruptedException {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		if (beforePageDepTime.equals(afterPageDepTime)) {
-			js.executeScript("arguments[0].scrollIntoView();", continueToPay);
-			if (progressbar.getText().equals("2")) {
-				
-				if(driver.findElements(By.xpath("//input[@value='yes']")).size()>0) {
-				terms.click();
-			}
+	public String checkProgressBar() {
+		String status = "NotOk";
+		if (progressbar.getText().equals("2")) {
+			status = "OK";
+		}
+		return status;
+	}
+
+	public String reviewDetails()throws InterruptedException {
+	     JavascriptExecutor js = (JavascriptExecutor) driver;
+
+	js.executeScript("arguments[0].scrollIntoView();", continueToPay);
+	
+
+		if (driver.findElements(By.xpath("//input[@value='yes']")).size() > 0) {
+			terms.click();
+		}
+
+		Thread.sleep(1000);
+
+		driver.findElement(By.xpath("//button[@id='review-continue']")).click();
+		Thread.sleep(1000);
+          String url= driver.getCurrentUrl();
+      return url;
+	}
+	public void fillUserDetails() throws InterruptedException {
 		
-				Thread.sleep(1000);
-				
-				driver.findElement(By.xpath("//button[@id='review-continue']")).click();
-				
-				
-				Thread.sleep(1000);
-				adult.click();
+		
+			adult.click();
 
-				String[] data = personal.get(0).split("%");
+			String[] data = personal.get(0).split("%");
 
-				Thread.sleep(1000);
-				driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys(data[3]);
-				driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys(data[2]);
-				driver.findElement(By.xpath("//div[@class='collapse in']//label[1]")).click();
-				driver.findElement(By.xpath("//input[@placeholder='Mobile No']")).sendKeys("9515746150");
-				driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys(data[1]);
-				Thread.sleep(2000);
-				driver.findElement(By.xpath("//button[@class='ack-cta btn fli_primary_btn text-uppercase']")).click();
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys(data[3]);
+			driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys(data[2]);
+			driver.findElement(By.xpath("//div[@class='collapse in']//label[1]")).click();
+			driver.findElement(By.xpath("//input[@placeholder='Mobile No']")).sendKeys("9515746150");
+			driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys(data[1]);
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//button[@class='ack-cta btn fli_primary_btn text-uppercase']")).click();
 
-			}
 		}
-	}
+	
 
 }

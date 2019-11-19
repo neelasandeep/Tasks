@@ -10,7 +10,6 @@ import com.epam.Utilities.BrowserFactory;
 import com.epam.Utilities.ConfigDataprovider;
 import com.epam.makeMytriptestcasesPages.BaseClass;
 import com.epam.makeMytriptestcasesPages.FlightsFilterPage;
-import com.epam.makeMytriptestcasesPages.MakeMytripFlightsPage;
 
 public class MakeMyTripFactory extends BaseClass {
 
@@ -55,6 +54,7 @@ public class MakeMyTripFactory extends BaseClass {
 		loggerextent = extentreport.createTest("Broken links");
 		homePage.BrokenLinksList();
 	}
+
 	@Test(priority = 3)
 	public void checckFlights() throws InterruptedException {
 
@@ -77,12 +77,11 @@ public class MakeMyTripFactory extends BaseClass {
 		loggerextent = extentreport.createTest("checking Hotels");
 		hotelPage.checkoutHotels(urlString, personal);
 	}
-	@Test(priority = 5)
+	@Test
 	public void checkingInDeals() throws InterruptedException{
 		loggerextent = extentreport.createTest("checking Deals");
 		urlString = excel.getStringData(5);
 		 homePage.checkMoreOptions("deals");
-		 
 		 driver=checkDeals.SearchInDeals(urlString);
 		 urlString = excel.getStringData(2);
 		 filterPage = new FlightsFilterPage(driver);

@@ -34,15 +34,23 @@ public class BaseClass {
 	public CheckingDealsPage checkDeals;
 	public HotelBookingPage hotelPage;
 
+	
+	
+	public void open(String url) {
+		driver.get(url);
+		
+
+	}
+	
 	@BeforeMethod
 	public void setup() {
 		driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getappUrl());
-
 		homePage = new HomePage(driver);
 		flightsPage = new MakeMytripFlightsPage(driver);
 		checkDeals=new CheckingDealsPage(driver);
 
 		hotelPage = new HotelBookingPage(driver);
+		
 	}
 
 	@AfterMethod
