@@ -49,18 +49,18 @@ public class CheckingDealsPage {
 
 	}
 
-	public void enterIntoDeals() {
-		more.click();
-		parentwindow = driver.getWindowHandle();
-		moreOptions.get(3).click();
-		Set<String> allwindow = driver.getWindowHandles();
-
-		for (String handle : allwindow) {
-			if (!handle.equals(parentwindow)) {
-				driver.switchTo().window(handle);
-			}
-		}
-	}
+//	public void enterIntoDeals() {
+//		more.click();
+//		parentwindow = driver.getWindowHandle();
+//		moreOptions.get(3).click();
+//		Set<String> allwindow = driver.getWindowHandles();
+//
+//		for (String handle : allwindow) {
+//			if (!handle.equals(parentwindow)) {
+//				driver.switchTo().window(handle);
+//			}
+//		}
+//	}
 
 	public WebDriver SearchInDeals(List<String> data) throws InterruptedException {
 
@@ -75,13 +75,23 @@ public class CheckingDealsPage {
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//div[@class='inputM inputHlp inputFilter']/input[@id='hp-widget__sTo']"))
 				.sendKeys(Keys.ENTER);
-		MakeMytripFlightsPage.waitForAD("webklipper-publisher-widget-container-notification-frame",
-				"//div[@id='webklipper-publisher-widget-container-notification-close-div']");
+		try {
+			MakeMytripFlightsPage.waitForAD("webklipper-publisher-widget-container-notification-frame",
+					"//div[@id='webklipper-publisher-widget-container-notification-close-div']");
+		} catch (Exception e1) {
+			
+		System.out.println("no adds proceed");
+		}
 
 		startdate.click();
-		MakeMytripFlightsPage.SetDate(data1[2], "//div[@class='ui-datepicker-title']",
-				"//a[contains(@class,'ui-datepicker-next ui-corner-all')]",
-				"//table/tbody/tr/td/a[contains(text(),#)]");
+		try {
+			MakeMytripFlightsPage.SetDate(data1[2], "//div[@class='ui-datepicker-title']",
+					"//a[contains(@class,'ui-datepicker-next ui-corner-all')]",
+					"//table/tbody/tr/td/a[contains(text(),#)]");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+		System.out.println("proceed");
+		}
 
 		passenger.click();
 		int adults = Integer.parseInt(data1[4].substring(0, 1));

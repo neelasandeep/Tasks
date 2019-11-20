@@ -21,9 +21,9 @@ public class MakeMytripFlightsPage {
 	static WebDriver driver;
 	Logger logger = Logger.getLogger(MakeMytripFlightsPage.class);
 
-	public MakeMytripFlightsPage(WebDriver driver1) {
-		driver = driver1;
-		PageFactory.initElements(driver, this);
+	public MakeMytripFlightsPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(this.driver, this);
 	}
 
 	static String adframe;
@@ -62,8 +62,13 @@ public class MakeMytripFlightsPage {
 	@Step("Chcking Flights")
 	public WebDriver checkFlights(List<String> data) throws InterruptedException {
 
-		waitForAD("webklipper-publisher-widget-container-notification-frame",
-				"//a[@id='webklipper-publisher-widget-container-notification-close-div']");
+		try {
+			waitForAD("webklipper-publisher-widget-container-notification-frame",
+					"//a[@id='webklipper-publisher-widget-container-notification-close-div']");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("no frame proceed");
+		}
 		for (int i = 0; i < data.size(); i++) {
 			String[] data1 = data.get(i).split("%");
 			From.click();

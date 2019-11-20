@@ -3,16 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.epam.makeMytripTests.FlightsCheckingFactory">
+      <class name="com.epam.makeMytripTests.FlightsCheckingController">
         <methods>
-          <include name="checckFlights"/>
+          <include name="checkingInDeals" invocation-numbers="0"/>
           <include name="ScreenShotOnFailure"/>
-          <include name="setup"/>
-          <include name="FillUserdata"/>
           <include name="tearDown"/>
           <include name="setupSuite"/>
         </methods>
-      </class> <!-- com.epam.makeMytripTests.FlightsCheckingFactory -->
+      </class> <!-- com.epam.makeMytripTests.FlightsCheckingController -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

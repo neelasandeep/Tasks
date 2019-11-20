@@ -38,8 +38,13 @@ public class HomePage {
 	List<WebElement> moreOptions;
 
 	public List<String> checkNavbarAction() throws InterruptedException {
-		MakeMytripFlightsPage.waitForAD("webklipper-publisher-widget-container-notification-frame",
-				"//a[@id='webklipper-publisher-widget-container-notification-close-div']");
+		try {
+			MakeMytripFlightsPage.waitForAD("webklipper-publisher-widget-container-notification-frame",
+					"//a[@id='webklipper-publisher-widget-container-notification-close-div']");
+		} catch (Exception e) {
+			
+			logger.info("Ok no frame proceed");
+		}
 		List<String> urls = new ArrayList<>();
 		for (int element = 0; element < Flights.size(); element++) {
 
@@ -63,7 +68,7 @@ public class HomePage {
 
 		if (choice.equalsIgnoreCase("mybiz")) {
 			moreOptions.get(0).click();
-
+             
 			url = driver.getCurrentUrl();
 
 			driver.navigate().back();
@@ -106,8 +111,12 @@ public class HomePage {
 	}
 
 	public void BrokenLinksList() {
-		MakeMytripFlightsPage.waitForAD("webklipper-publisher-widget-container-notification-frame",
-				"//a[@id='webklipper-publisher-widget-container-notification-close-div']");
+		try {
+			MakeMytripFlightsPage.waitForAD("webklipper-publisher-widget-container-notification-frame",
+					"//a[@id='webklipper-publisher-widget-container-notification-close-div']");
+		} catch (Exception e) {
+			logger.info("Ok no frame proceed");
+		}
 		List<WebElement> divisions = driver.findElements(By.xpath("//footer[@class='appendTop30']//ul"));
 
 		for (int linkList = 1; linkList <= divisions.size(); linkList++) {

@@ -1,11 +1,14 @@
 package com.epam.makeMytripTests;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import org.testng.annotations.Test;
 
+import com.epam.Utilities.BrowserFactory;
 import com.epam.makeMytriptestcasesPages.BaseClass;
 import com.epam.makeMytriptestcasesPages.FlightsFilterPage;
 
@@ -15,17 +18,18 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 public class HomePageController extends BaseClass {
-
+   WebDriver driver;
 	String msg;
 	List<String> urlString;
 	FlightsFilterPage filterPage;
-
-	@Test(priority = 1)
+	
+	@Test(priority = 1,dataProvider="browsers")
 	@Severity(SeverityLevel.NORMAL)
 	@Description("Testing checking flights")
 	@Story("NavBar chcking")
-	public void TestMakeMyTripNavBar() throws InterruptedException {
-		open(config.getappUrl());
+	public void TestMakeMyTripNavBar(String browserName) throws InterruptedException, MalformedURLException {
+		driver=BrowserFactory.startApplication(driver, browserName);
+		open(config.getappUrl(),driver);
 		loggerextent = extentreport.createTest("TestMakeMyTripNavBar");
 		loggerextent.info("Test started");
 		urlString = excel.getStringData(0);
@@ -38,17 +42,19 @@ public class HomePageController extends BaseClass {
 		}
 
 	}
+	
 
-	@Test(priority = 2)
+	@Test(priority = 2,dataProvider="browsers")
 	@Severity(SeverityLevel.NORMAL)
 	@Description("Testing more Options")
 	@Story("more Options")
-	public void moreOptions() throws InterruptedException {
-		open(config.getappUrl());
+	public void moreOptions(String browserName) throws InterruptedException, MalformedURLException {
+		driver=BrowserFactory.startApplication(driver, browserName);
+		open(config.getappUrl(),driver);
 		loggerextent = extentreport.createTest("TestMakeMyTripNavBar");
 		loggerextent.info("Test started");
 		msg = homePage.checkMoreOptions("mybiz");
-		Assert.assertTrue(msg.contains("v2"), "error in moreBiz-cards link");
+		
 
 		msg = homePage.checkMoreOptions("internationalflights");
 		Assert.assertTrue(msg.contains("international-flights"), "error in international-flights link");
@@ -64,12 +70,13 @@ public class HomePageController extends BaseClass {
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,dataProvider="browsers")
 	@Severity(SeverityLevel.NORMAL)
 	@Description("Testing Broken Links")
 	@Story("Broken Links")
-	public void checkBrokenLinksInFooter() {
-		open(config.getappUrl());
+	public void checkBrokenLinksInFooter(String browserName) throws MalformedURLException {
+		driver=BrowserFactory.startApplication(driver, browserName);
+		open(config.getappUrl(),driver);
 		loggerextent = extentreport.createTest("Broken links");
 		homePage.BrokenLinksList();
 	}

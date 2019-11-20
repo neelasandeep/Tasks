@@ -2,6 +2,8 @@ package com.epam.makeMytriptestcasesPages;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.PropertyConfigurator;
 
@@ -12,6 +14,7 @@ import org.testng.annotations.AfterMethod;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -33,21 +36,31 @@ public class BaseClass {
 	public CheckingDealsPage checkDeals;
 	public HotelBookingPage hotelPage;
 
-	public void open(String url) {
+	public void open(String url,WebDriver driver1) {
+		driver=driver1;
 		driver.get(url);
-
-	}
-
-	@BeforeMethod
-	public void setup() {
-		driver = BrowserFactory.startApplication(driver, config.getBrowser(), config.getappUrl());
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+   		
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		homePage = new HomePage(driver);
 		flightsPage = new MakeMytripFlightsPage(driver);
 		checkDeals = new CheckingDealsPage(driver);
 
 		hotelPage = new HotelBookingPage(driver);
-
 	}
+	@DataProvider(name="browsers")
+	public Object[][] getDataFromDataprovider(){
+	    return new Object[][] 
+	    	{
+	            {config.getChrome()}
+	           
+	        };
+
+	    }
+
+	
+	
 
 	@AfterMethod
 	public void tearDown() {
@@ -81,16 +94,5 @@ public class BaseClass {
 //		}
 //		extentreport.flush();
 	}
-//	public boolean iselementPresent(String selector,WebDriver driver) {
-//		//return driver.findElements(By.xpath(selector)).size()>0;
-//		if(driver.findElement(By.xpath(selector))!= null){
-//
-//			return true;
-//
-//			}else{
-//
-//				return false;
-//
-//			}
-//	}
+
 }

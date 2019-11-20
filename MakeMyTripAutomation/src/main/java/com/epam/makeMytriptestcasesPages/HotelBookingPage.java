@@ -5,12 +5,15 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HotelBookingPage extends BaseClass {
 	WebDriver driver;
@@ -36,15 +39,18 @@ public class HotelBookingPage extends BaseClass {
 	WebElement select;
 	@FindBy(xpath = "//input[@id='guest']")
 	WebElement RoomsAndguest;
-	@FindBy(xpath = "//div[@class='hsw_inner']//ul[1]//li")
+	@FindBy(xpath = "//div[@class='hsw_inner']//ul[1]//li")//div[@id='Listing_hotel_31']//div
 	List<WebElement> Rooms;
-	@FindBy(xpath = "//div[contains(@class,'padding20 makeFlex column')]/p[@class='latoBlack font26 blackText appendBottom5']")
+	@FindBy(xpath = "//div[contains(@class,'padding20 makeFlex column')]")
 	List<WebElement> Hotels;
 
 	@FindBy(xpath = "//span[@class='numbering progress']")
 	WebElement progressBar;
 	@FindBy(xpath = "//span[@id='detpg_book_combo_btn']")
 	WebElement bokkCombo;
+	@FindBy(xpath = "//label[contains(text(),'MMT Assured')]")
+	WebElement MMTFilter;
+	
 
 	public void checkoutHotels(List<String> data, List<String> personaldata) throws InterruptedException {
 		try {
@@ -52,7 +58,7 @@ public class HotelBookingPage extends BaseClass {
 					"//a[@id='webklipper-publisher-widget-container-notification-close-div']");
 		} catch (Exception e) {
 
-			System.out.println("no rame proceed");
+			logger.info("no rame proceed");
 		}
 		personal = personaldata;
 		String[] data1 = data.get(0).split("%");
@@ -60,7 +66,7 @@ public class HotelBookingPage extends BaseClass {
 		city.click();
 		cityname.sendKeys(data1[0]);
 		Thread.sleep(1000);
-		select.click();
+		cityname.sendKeys(Keys.ENTER);
 		startDate.click();
 		this.SetDate(data1[1]);
 		endDate.click();
@@ -108,17 +114,22 @@ public class HotelBookingPage extends BaseClass {
 		try {
 			if (driver.findElement(By.xpath("//div/a[contains(text(),'SHOW HOTELS')]")).isDisplayed()) {
 				driver.findElement(By.xpath("//div/a[contains(text(),'SHOW HOTELS')]")).click();
-				Thread.sleep(1000);
+				
 				driver.findElement(By.xpath("//body[@class='bodyFixed overlayWholeBlack']")).click();
-				Thread.sleep(1000);
+				
 			}
 		} catch (Exception e) {
 
 			System.out.println("Yo can proceed");
 		}
 		System.out.println("wow its displayed");
-		driver.findElement(By.xpath("//label[contains(text(),'MMT Assured')]")).click();
-		Thread.sleep(4000);
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//
+//		js.executeScript("arguments[0].scrollIntoView();", MMTFilter);
+//		MMTFilter.click();
+//		WebElement sendIssue =(WebElement)new WebDriverWait(driver,10).
+//				until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='hlistpg_fr_popular_filters']//li[2]//span[1]")));
+//		sendIssue.click();
 		WebElement slider = driver.findElement(By.xpath("//div[@id='hlistpg_fr_price_per_night']//span[1]//div[1]"));
 		Actions actions = new Actions(driver);
 		actions.dragAndDropBy(slider, +60, 0).perform();

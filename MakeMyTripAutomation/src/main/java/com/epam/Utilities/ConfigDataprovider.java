@@ -31,6 +31,10 @@ public class ConfigDataprovider {
 
 		return properties.getProperty("Browser");
 	}
+	public String getChrome() {
+
+		return properties.getProperty("chromeBrowser");
+	}
 
 	public String getappUrl() {
 		return properties.getProperty("appUrl");
