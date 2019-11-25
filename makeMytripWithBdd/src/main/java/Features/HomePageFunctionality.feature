@@ -10,7 +10,7 @@ Examples:
 |Options|
 |NavBar|
 
-
-@BrokenLinks
-Scenario:
-When user select any footerlinks it should give response
+#
+#@BrokenLinks
+#Scenario:
+#When user select any footerlinks it should give response

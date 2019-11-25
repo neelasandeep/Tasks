@@ -1,7 +1,13 @@
 package Stepdefs;
 
+import java.io.IOException;
 import java.util.List;
 
+import org.testng.ITestResult;
+
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.epam.Utilities.BrowserFactory;
+import com.epam.Utilities.Helper;
 import com.epam.makeMytriptestcasesPagess.BaseClass;
 
 import cucumber.api.java.After;
@@ -16,9 +22,11 @@ public class HotelbookingStepDef extends BaseClass {
 	List<String> urlString;
 	@Given("^User Should be in Hotels page$")
 	public void user_Should_be_in_Hotels_page() throws Throwable {
+		//localSetup();
 		setupSuite();
 		//localSetup();
-		open(config.getappUrl());
+	
+		open("https://www.makemytrip.com/");
 		
 		hotelPage.Hotelspage();
 	}
@@ -55,6 +63,7 @@ public class HotelbookingStepDef extends BaseClass {
 	@Then("^it will moves to userdetails page$")
 	public void it_will_moves_to_userdetails_page() throws Throwable {
 	   hotelPage.fillPersonalData();
+	  
 	}
-
+	
 }

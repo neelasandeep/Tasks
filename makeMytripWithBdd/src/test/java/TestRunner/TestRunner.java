@@ -1,22 +1,23 @@
 package TestRunner;
 
 import cucumber.api.CucumberOptions;
+
 import cucumber.api.testng.TestNGCucumberRunner;
 import cucumber.api.testng.CucumberFeatureWrapper;
-
 import org.testng.annotations.AfterClass;
-
 import org.testng.annotations.BeforeClass;
-
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import com.epam.makeMytriptestcasesPagess.BaseClass;
 
-@CucumberOptions(features = "src/main/java/Features", glue = { "Stepdefs" }, plugin = { "pretty",
-		"html:target/cucumber-reports/cucumber-pretty", "json:target/cucumber-jsonReports/CucumberTestReport.json",
+@CucumberOptions(features = "src/main/java/Features", glue = { "Stepdefs" }
+//, tags = { "@flights" }
+//, plugin = { "pretty",
+// "html:target/cucumber-reports/cucumber-pretty",
+// "json:target/cucumber-jsonReports/CucumberTestReport.json",
 //	                "rerun:target/cucumber-reports/rerun.txt"
-})
+//}
+)
 public class TestRunner extends BaseClass {
 	private TestNGCucumberRunner testNGCucumberRunner;
 
@@ -25,15 +26,16 @@ public class TestRunner extends BaseClass {
 		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
 	}
 
-	@Test(description = "Runs Cucumber Feature", dataProvider = "features")
+	@Test(description = "Runs Cucumber Feature", threadPoolSize = 5, dataProvider = "features")
 	public void feature(CucumberFeatureWrapper cucumberFeature) {
 
-		loggerextent = extentreport.createTest("TestMakeMyTripNavBar");
-		loggerextent.info("Test started");
+		loggerextent = extentreport.createTest("checkflights");
 		testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
+		
+
 	}
 
-	@DataProvider(name = "features")
+	@DataProvider(name = "features", parallel = true)
 	public Object[][] features() {
 		return testNGCucumberRunner.provideFeatures();
 	}

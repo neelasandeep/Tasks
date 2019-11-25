@@ -108,7 +108,7 @@ public class HotelBookingPage extends BaseClass {
 				driver.findElement(By.xpath("//span[@class='DayPicker-NavButton DayPicker-NavButton--next']")).click();
 			}
 		}
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		driver.findElement(By.xpath("//div[@class='DayPicker-Day' and contains(text()," + day + ")]")).click();
 
 	}
@@ -127,7 +127,7 @@ public class HotelBookingPage extends BaseClass {
 			System.out.println("Yo can proceed");
 		}
 		System.out.println("wow its displayed");
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		
 		driver.findElement(By.xpath("//div[@class='filterRow'][2]//li[2]//label")).click();
 		
@@ -136,7 +136,7 @@ public class HotelBookingPage extends BaseClass {
 		WebElement slider = driver.findElement(By.xpath("//div[@id='hlistpg_fr_price_per_night']//span[1]//div[1]"));
 		Actions actions = new Actions(driver);
 		actions.dragAndDropBy(slider, +60, 0).perform();
-		Thread.sleep(1000);
+		
 		
 
 	}
@@ -163,13 +163,13 @@ public class HotelBookingPage extends BaseClass {
 
 	public void fillPersonalData() {
 		String[] personalinfo = personal.get(0).split("%");
-		if (progressBar.getText().equals("2")) {
+		//if (progressBar.getText().equals("2")) {
 			driver.findElement(By.xpath("//input[@placeholder='Enter First Name']")).sendKeys(personalinfo[0]);
 			driver.findElement(By.xpath("//input[@placeholder='Enter Last Name']")).sendKeys(personalinfo[1]);
 			driver.findElement(By.xpath("//input[@id='email']")).sendKeys(personalinfo[2]);
 			driver.findElement(By.xpath("//input[@id='mNo']")).sendKeys("9876546786");
 			driver.findElement(By.xpath("//a[@class='primaryBtn btnPayNow']")).click();
 
-		}
+		//}
 	}
 }

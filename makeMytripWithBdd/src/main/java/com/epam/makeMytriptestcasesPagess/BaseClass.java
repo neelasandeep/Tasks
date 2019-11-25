@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.PropertyConfigurator;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -27,32 +28,43 @@ import com.epam.Utilities.ExcelDataProvider;
 import com.epam.Utilities.Helper;
 import com.epam.makeMytriptestcasesPagess.FlightsFilterPage;
 
+import cucumber.api.java.After;
+
 public class BaseClass {
-	public static WebDriver driver;
-	public static HomePage homePage;
-	public static MakeMytripFlightsPage flightsPage;
-	public static FlightsFilterPage filter;
+	public  WebDriver driver;
+	public  HomePage homePage;
+	public  MakeMytripFlightsPage flightsPage;
+	public  FlightsFilterPage filter;
 	public ExcelDataProvider excel;
 	public ConfigDataprovider config;
 	public ExtentReports extentreport;
 	public ExtentTest loggerextent;
-	public static CheckingDealsPage checkDeals;
-	public static HotelBookingPage hotelPage;
-public static FlightsFilterPage filterPage;
-	public static WebDriver open(String url) {
-		
+	public  CheckingDealsPage checkDeals;
+	public  HotelBookingPage hotelPage;
+public FlightsFilterPage filterPage;
+public Helper helper;
+public static WebDriver driver2;
+	public  void open(String url) {
+//         System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+//		
+//		driver=new ChromeDriver();
+//		
+		driver=BrowserFactory.startBrowser();
 		System.out.println("---"+url);
 		driver.get(url);
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
    		
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		homePage = new HomePage(driver);
 		flightsPage = new MakeMytripFlightsPage(driver);
 		checkDeals = new CheckingDealsPage(driver);
 		 filter=new FlightsFilterPage(driver);
+		
 		hotelPage = new HotelBookingPage(driver);
-		return driver;
+		driver2=driver;
+		System.out.println(driver);
+		
 	}
 	@DataProvider(name="browsers")
 	public Object[][] getDataFromDataprovider(){
@@ -65,41 +77,40 @@ public static FlightsFilterPage filterPage;
 	    }
 
 	
-	@BeforeMethod
-	public void localSetup()  {
-		driver=BrowserFactory.startBrowser();
-	}
 
-	@AfterMethod
-	public void tearDown() {
-		BrowserFactory.quitBrowser(driver);
-	}
+
+//	@AfterMethod
+//	public void tearDown() {
+//		BrowserFactory.quitBrowser(driver);
+//	}
 
 	@BeforeSuite
      public void setupSuite() {
 		PropertyConfigurator.configure(System.getProperty("user.dir") + "\\resources\\log4j.properties");
 		excel = new ExcelDataProvider();
 	config = new ConfigDataprovider();
-		ExtentHtmlReporter extentHtml = new ExtentHtmlReporter(new File(
+	 ExtentHtmlReporter extentHtml = new ExtentHtmlReporter(new File(
 				System.getProperty("user.dir") + "/Reports/MakeMytripHtml" + Helper.getCurrentDateTime() + ".html"));
 		extentreport = new ExtentReports();
 		extentreport.attachReporter(extentHtml);
 	}
-    @AfterMethod
-	public void ScreenShotOnFailure(ITestResult result) throws IOException {
+	   @AfterMethod
+		public void ScreenShotOnFailure(ITestResult result) throws IOException {
+		
 
-		if (result.getStatus() == ITestResult.SUCCESS) {
-			loggerextent.pass("test passed",
-					MediaEntityBuilder.createScreenCaptureFromPath(Helper.ScreenShots(driver)).build());
-		} else if (result.getStatus() == ITestResult.SKIP) {
-			loggerextent.skip("test skipped",
-					MediaEntityBuilder.createScreenCaptureFromPath(Helper.ScreenShots(driver)).build());
-		} else if (result.getStatus() == ITestResult.FAILURE) {
-			loggerextent.skip("test failed",
-					MediaEntityBuilder.createScreenCaptureFromPath(Helper.ScreenShots(driver)).build());
+			if (result.getStatus() == ITestResult.SUCCESS) {
+				loggerextent.pass("test passed",
+						MediaEntityBuilder.createScreenCaptureFromPath( Helper.ScreenShots(driver2)).build());
+			} else if (result.getStatus() == ITestResult.SKIP) {
+				loggerextent.skip("test skipped",
+						MediaEntityBuilder.createScreenCaptureFromPath(Helper.ScreenShots(driver2)).build());
+			} else if (result.getStatus() == ITestResult.FAILURE) {
+				loggerextent.skip("test failed",
+						MediaEntityBuilder.createScreenCaptureFromPath(Helper.ScreenShots(driver2)).build());
+			}
+			extentreport.flush();
 		}
-		extentreport.flush();
-	}
+	
 	
 
 }

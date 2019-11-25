@@ -1,12 +1,18 @@
 package Stepdefs;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.testng.Assert;
+import org.testng.ITestResult;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.epam.Utilities.BrowserFactory;
+import com.epam.Utilities.Helper;
 import com.epam.makeMytriptestcasesPagess.BaseClass;
 import com.epam.makeMytriptestcasesPagess.HomePage;
 
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -16,9 +22,11 @@ public class HomePageFunctionalitiesStepdef extends BaseClass{
    List<String> moreurl=new ArrayList<String>();
 @Given("^User should be in HomePage$")
 public void user_should_be_in_HomePage() throws Throwable {
+	//localSetup();
 	setupSuite();
+	
 
-	open(config.getappUrl());
+	open("https://www.makemytrip.com/");
 }
 
 @When("^User clicks on any Option \"(.*?)\"$")
@@ -64,6 +72,5 @@ public void user_select_any_footerlinks_it_should_give_response() {
     homePage.BrokenLinksList();
 }
 
-	
 
 }

@@ -72,9 +72,11 @@ public class MakeMytripFlightsPage {
 		}
 		for (int i = 0; i < data.size(); i++) {
 			String[] data1 = data.get(i).split("%");
-			Thread.sleep(2000);
-			driver.findElement(By.xpath("//input[@id='fromCity']")).sendKeys(data1[0]);
+			Thread.sleep(500);
+			//driver.findElement(By.xpath("//input[@id='fromCity']")).sendKeys(data1[0]);
+			From.sendKeys(data1[0]);
 			Thread.sleep(1000);
+			//driver.findElement(By.xpath("//input[@id='fromCity']")).sendKeys(Keys.ENTER);
 			select.click();
 			
 					

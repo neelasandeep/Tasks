@@ -11,7 +11,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
-public class Helper {
+import com.epam.makeMytriptestcasesPagess.BaseClass;
+
+public class Helper extends BaseClass{
 	static Logger logger = Logger.getLogger(Helper.class);
 
 	public static String ScreenShots(WebDriver driver) {
