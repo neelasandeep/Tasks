@@ -32,19 +32,19 @@ import cucumber.api.java.After;
 
 public class BaseClass {
 	public  WebDriver driver;
-	public  HomePage homePage;
+	
 	public  MakeMytripFlightsPage flightsPage;
 	public  FlightsFilterPage filter;
-	public ExcelDataProvider excel;
+	//public ExcelDataProvider excel;
 	public ConfigDataprovider config;
 	public ExtentReports extentreport;
 	public ExtentTest loggerextent;
 	public  CheckingDealsPage checkDeals;
-	public  HotelBookingPage hotelPage;
+	
 public FlightsFilterPage filterPage;
 public Helper helper;
 public static WebDriver driver2;
-	public  void open(String url) {
+	public  WebDriver open(String url) {
 //         System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 //		
 //		driver=new ChromeDriver();
@@ -56,14 +56,15 @@ public static WebDriver driver2;
    		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		homePage = new HomePage(driver);
+	
 		flightsPage = new MakeMytripFlightsPage(driver);
 		checkDeals = new CheckingDealsPage(driver);
 		 filter=new FlightsFilterPage(driver);
 		
-		hotelPage = new HotelBookingPage(driver);
+		
 		driver2=driver;
 		System.out.println(driver);
+		return  driver;
 		
 	}
 	@DataProvider(name="browsers")
@@ -87,7 +88,7 @@ public static WebDriver driver2;
 	@BeforeSuite
      public void setupSuite() {
 		PropertyConfigurator.configure(System.getProperty("user.dir") + "\\resources\\log4j.properties");
-		excel = new ExcelDataProvider();
+		//excel = new ExcelDataProvider();
 	config = new ConfigDataprovider();
 	 ExtentHtmlReporter extentHtml = new ExtentHtmlReporter(new File(
 				System.getProperty("user.dir") + "/Reports/MakeMytripHtml" + Helper.getCurrentDateTime() + ".html"));

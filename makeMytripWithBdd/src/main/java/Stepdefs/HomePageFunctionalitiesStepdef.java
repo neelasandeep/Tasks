@@ -3,30 +3,40 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.epam.Utilities.BrowserFactory;
+import com.epam.Utilities.ExcelDataProvider;
 import com.epam.Utilities.Helper;
 import com.epam.makeMytriptestcasesPagess.BaseClass;
 import com.epam.makeMytriptestcasesPagess.HomePage;
 
 import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-public class HomePageFunctionalitiesStepdef extends BaseClass{
+public class HomePageFunctionalitiesStepdef{
+	
 	List<String> urlString;
 	List<String> urls;
+	WebDriver homedriver;
+	public  HomePage homePage;
    List<String> moreurl=new ArrayList<String>();
+   public ExcelDataProvider excel;
 @Given("^User should be in HomePage$")
 public void user_should_be_in_HomePage() throws Throwable {
 	//localSetup();
-	setupSuite();
+	BaseClass bs=new BaseClass();
+	bs.setupSuite();
+	// setupSuite();
+	homedriver=bs.open("https://www.makemytrip.com/");
+	homePage = new HomePage(homedriver);
+	excel = new ExcelDataProvider();
 	
-
-	open("https://www.makemytrip.com/");
 }
 
 @When("^User clicks on any Option \"(.*?)\"$")

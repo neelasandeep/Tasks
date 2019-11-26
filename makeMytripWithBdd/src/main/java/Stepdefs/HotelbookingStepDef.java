@@ -3,32 +3,37 @@ package Stepdefs;
 import java.io.IOException;
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.epam.Utilities.BrowserFactory;
+import com.epam.Utilities.ExcelDataProvider;
 import com.epam.Utilities.Helper;
 import com.epam.makeMytriptestcasesPagess.BaseClass;
+import com.epam.makeMytriptestcasesPagess.HotelBookingPage;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-public class HotelbookingStepDef extends BaseClass {
-	
-	
-	
+public class HotelbookingStepDef  {
+	  WebDriver hoteldriver;
+	  public  HotelBookingPage hotelPage;
+	  public ExcelDataProvider excel;
 	List<String> urlString;
 	@Given("^User Should be in Hotels page$")
 	public void user_Should_be_in_Hotels_page() throws Throwable {
 		//localSetup();
-		setupSuite();
+		BaseClass bs=new BaseClass();
+		bs.setupSuite();
 		//localSetup();
 	
-		open("https://www.makemytrip.com/");
-		
+		hoteldriver=bs.open("https://www.makemytrip.com/");
+		hotelPage = new HotelBookingPage(hoteldriver);
 		hotelPage.Hotelspage();
+		excel = new ExcelDataProvider();
 	}
 
 	@Then("^User enters Place and date to book hotel$")
@@ -39,7 +44,7 @@ public class HotelbookingStepDef extends BaseClass {
 	}
 
 	@Then("^clicks on search Button$")
-	public void clicks_on_search_Button()  {
+	public void clicks_on_search_Button() throws InterruptedException  {
 	   hotelPage.searchHotels();
 	}
 
@@ -56,14 +61,14 @@ public class HotelbookingStepDef extends BaseClass {
 	@Then("^it will shows Book hotel option to click$")
 	public void it_will_shows_Book_hotel_option_to_click() throws Throwable {
 	   hotelPage.ContinueToBookHotel();
+   hotelPage.fillPersonalData();
 	}
-
-	
-
 	@Then("^it will moves to userdetails page$")
 	public void it_will_moves_to_userdetails_page() throws Throwable {
-	   hotelPage.fillPersonalData();
-	  
+		// hotelPage.fillPersonalData();
 	}
+	
+
+	
 	
 }

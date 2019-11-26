@@ -29,7 +29,7 @@ public class TestRunner extends BaseClass {
 	@Test(description = "Runs Cucumber Feature", threadPoolSize = 5, dataProvider = "features")
 	public void feature(CucumberFeatureWrapper cucumberFeature) {
 
-		loggerextent = extentreport.createTest("checkflights");
+		loggerextent = extentreport.createTest("hotels");
 		testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
 		
 

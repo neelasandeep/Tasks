@@ -8,7 +8,7 @@
           <include name="setupSuite"/>
           <include name="tearDownClass"/>
           <include name="ScreenShotOnFailure"/>
-          <include name="feature" invocation-numbers="0 2 1"/>
+          <include name="feature" invocation-numbers="0"/>
           <include name="setUpClass"/>
         </methods>
       </class> <!-- TestRunner.TestRunner -->

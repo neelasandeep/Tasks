@@ -85,6 +85,7 @@ public class MakeMytripFlightsPage {
 			Thread.sleep(1000);
             to.sendKeys(Keys.ENTER);
 			departure.click();
+			Thread.sleep(1000);
 			SetDate(data1[2], "//div[@class=\"DayPicker-Caption\"]/div",
 					"//span[@class='DayPicker-NavButton DayPicker-NavButton--next']",
 					"//div[@class='DayPicker-Month'][1]/div[3]/div/div[@role='gridcell'][#]");
@@ -113,7 +114,7 @@ public class MakeMytripFlightsPage {
 			text = driver.findElement(By.xpath(month1)).getText();
 			System.out.println(text + "mine");
 			String datenew[] = text.split(" ");
-			System.out.println();
+			System.out.println(text);
 			text = datenew[0].substring(0, 3).toUpperCase() + " " + datenew[1];
 
 			if (text.equals(month)) {

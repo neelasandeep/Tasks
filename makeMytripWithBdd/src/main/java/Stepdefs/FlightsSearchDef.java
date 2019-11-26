@@ -3,34 +3,45 @@ package Stepdefs;
 import java.io.IOException;
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.epam.Utilities.BrowserFactory;
+import com.epam.Utilities.ExcelDataProvider;
 import com.epam.Utilities.Helper;
 import com.epam.makeMytriptestcasesPagess.BaseClass;
+import com.epam.makeMytriptestcasesPagess.FlightsFilterPage;
+import com.epam.makeMytriptestcasesPagess.MakeMytripFlightsPage;
 
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class FlightsSearchDef extends BaseClass {
+public class FlightsSearchDef  {
 
 	List<String> urlString;
-	
+	WebDriver homedriver;
+	public  MakeMytripFlightsPage flightsPage;
+	public  FlightsFilterPage filter;
+	  public ExcelDataProvider excel;
 	@Given("^User in Home page \"(.*?)\"$")
 	public void user_in_Home_page(String arg1) throws Throwable {
 		
-		setupSuite();
+		BaseClass bs=new BaseClass();
+		bs.setupSuite();
 		
 
 		
 		if(arg1.equalsIgnoreCase("Home")) {
-			open("https://www.makemytrip.com/");
+			homedriver=bs.open("https://www.makemytrip.com/");
+			flightsPage = new MakeMytripFlightsPage(homedriver);
+			 filter=new FlightsFilterPage(homedriver);
+			 excel = new ExcelDataProvider();
 		}else {
 		
-			open("https://www.makemytrip.com/daily-deals/");
+			bs.open("https://www.makemytrip.com/daily-deals/");
 		}
 	}
 
@@ -41,7 +52,7 @@ public class FlightsSearchDef extends BaseClass {
 			flightsPage.checkFlights(urlString);
 		}else {
 		urlString = excel.getStringData(5);
-		checkDeals.SearchInDeals(urlString);
+		//checkDeals.SearchInDeals(urlString);
 		}
 	}
 
@@ -50,7 +61,7 @@ public class FlightsSearchDef extends BaseClass {
 		if(arg1.equalsIgnoreCase("Home")) {
 			flightsPage.search();
 		}else {
-		checkDeals.dealsSearch();
+		//checkDeals.dealsSearch();
 		}
 	}
 
@@ -68,7 +79,7 @@ public class FlightsSearchDef extends BaseClass {
 
 	@Then("^user will be in review page Tocheck Flight details$")
 	public void user_will_be_in_review_page_Tocheck_Flight_details() throws Throwable {
-		filter.reviewDetails(driver);
+		filter.reviewDetails(homedriver);
 		filter.checkProgressBar();
 	}
 

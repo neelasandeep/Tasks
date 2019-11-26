@@ -16,11 +16,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HotelBookingPage extends BaseClass {
-	WebDriver driver;
+	 WebDriver driver;
 	Logger logger = Logger.getLogger(FlightsFilterPage.class);
 
-	public HotelBookingPage(WebDriver driver) {
-		this.driver = driver;
+	public HotelBookingPage(WebDriver driver1) {
+		driver = driver1;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -82,7 +82,8 @@ public class HotelBookingPage extends BaseClass {
 		Thread.sleep(2000);
 
 	}
-	public void searchHotels() {
+	public void searchHotels() throws InterruptedException {
+		Thread.sleep(1000);
 		driver.findElement(By.xpath("//button[@id='hsw_search_button']")).click();
 	}
 
@@ -128,14 +129,16 @@ public class HotelBookingPage extends BaseClass {
 		}
 		System.out.println("wow its displayed");
 		Thread.sleep(500);
-		
-		driver.findElement(By.xpath("//div[@class='filterRow'][2]//li[2]//label")).click();
+		WebElement filter1 = driver.findElement(By.xpath("//div[@class='filterRow'][2]//li[2]//label"));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(filter1).click().perform();
+	//	driver.findElement(By.xpath("//div[@class='filterRow'][2]//li[2]//label")).click();
 		
 		
 		Thread.sleep(1000);
 		WebElement slider = driver.findElement(By.xpath("//div[@id='hlistpg_fr_price_per_night']//span[1]//div[1]"));
-		Actions actions = new Actions(driver);
-		actions.dragAndDropBy(slider, +60, 0).perform();
+		Actions actions1 = new Actions(driver);
+		actions1.dragAndDropBy(slider, +60, 0).perform();
 		
 		
 
@@ -168,8 +171,10 @@ public class HotelBookingPage extends BaseClass {
 			driver.findElement(By.xpath("//input[@placeholder='Enter Last Name']")).sendKeys(personalinfo[1]);
 			driver.findElement(By.xpath("//input[@id='email']")).sendKeys(personalinfo[2]);
 			driver.findElement(By.xpath("//input[@id='mNo']")).sendKeys("9876546786");
-			driver.findElement(By.xpath("//a[@class='primaryBtn btnPayNow']")).click();
-
+			
+				driver.findElement(By.xpath("//a[@class='primaryBtn btnPayNow']")).click();
+			
+			
 		//}
 	}
 }
