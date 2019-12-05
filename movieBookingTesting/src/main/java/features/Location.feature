@@ -10,6 +10,7 @@ Then user should redirect to Movies page
 Examples:
 |option|
 |hyderabad|
-|pune|
 |Chandigarh|
+|Delhi|
+|Bangalore|
  
