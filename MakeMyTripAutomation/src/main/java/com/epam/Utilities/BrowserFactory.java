@@ -53,6 +53,14 @@ public class BrowserFactory {
 
 		return driver;
 	}
+public static WebDriver startBrowser()  {
+        
+		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+		
+		WebDriver driver=new ChromeDriver();
+		return driver;
+	}
+    
 
 //	public static WebDriver startBrowser() throws MalformedURLException {
 //

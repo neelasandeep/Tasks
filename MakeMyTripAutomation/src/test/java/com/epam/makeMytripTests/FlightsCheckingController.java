@@ -27,7 +27,8 @@ public class FlightsCheckingController extends BaseClass{
 	@Description("Testing checking flights")
 	@Story("flights chcking")
 	public void checckFlights(String browserName) throws InterruptedException, MalformedURLException {
-		driver=BrowserFactory.startApplication(driver, browserName);
+		//driver=BrowserFactory.startApplication(driver, browserName);
+		driver=BrowserFactory.startBrowser();
      open(config.getappUrl(),driver);
 		loggerextent = extentreport.createTest("checkflights");
 		urlString = excel.getStringData(1);
