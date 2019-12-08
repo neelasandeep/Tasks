@@ -27,6 +27,7 @@ public class PostChecking {
 			RestAssured.baseURI="https://petstore.swagger.io/v2/pet";
 			RequestSpecification request=RestAssured.given();
 			request.header("Content-Type","application/json");
+			System.out.println(jsonInString);
 			request.body(jsonInString);
 			Response response=request.request(Method.POST);
 			

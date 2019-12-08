@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-11-07T20:31:37 IST" name="Default suite" finished-at="2019-11-07T20:31:41 IST" duration-ms="4506">
+  <suite name="Default suite" duration-ms="6084" started-at="2019-12-07T21:30:30 IST" finished-at="2019-12-07T21:30:36 IST">
     <groups>
     </groups>
-    <test started-at="2019-11-07T20:31:37 IST" name="Default test" finished-at="2019-11-07T20:31:41 IST" duration-ms="4506">
+    <test name="Default test" duration-ms="6084" started-at="2019-12-07T21:30:30 IST" finished-at="2019-12-07T21:30:36 IST">
       <class name="com.epam.apiTesting.PostChecking">
-        <test-method signature="postcheck()[pri:0, instance:com.epam.apiTesting.PostChecking@65b3f4a4]" started-at="2019-11-07T20:31:37 IST" name="postcheck" finished-at="2019-11-07T20:31:41 IST" duration-ms="4457" status="PASS">
+        <test-method status="PASS" signature="postcheck()[pri:0, instance:com.epam.apiTesting.PostChecking@2758fe70]" name="postcheck" duration-ms="6017" started-at="2019-12-07T21:30:30 IST" finished-at="2019-12-07T21:30:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postcheck -->

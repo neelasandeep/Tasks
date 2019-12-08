@@ -44,4 +44,24 @@ public class ConfigDataprovider {
 		return properties.getProperty("hotelsUrl");
 
 	}
+	public String getApiURI() {
+
+		return properties.getProperty("apiUri");
+	}
+	public String getCity() {
+
+		return properties.getProperty("city");
+	}
+	public String getpostURI() {
+
+		return properties.getProperty("post");
+	}
+	public String getPOSTPath() {
+
+		return properties.getProperty("postpath");
+	}
+	public String getEmpId() {
+
+		return properties.getProperty("empId");
+	}
 }

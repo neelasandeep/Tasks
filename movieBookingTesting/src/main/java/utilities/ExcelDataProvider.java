@@ -20,7 +20,8 @@ public class ExcelDataProvider {
 	Logger logger = Logger.getLogger(ExcelDataProvider.class);
 	String line="";
 	public ExcelDataProvider() {
-		File src = new File("./TestData/TestData.xlsx");
+		//File src = new File("./TestData/TestData.xlsx");
+		File src = new File("./test-data/dataforEmp.xlsx");
 		//FileInputStream fis;
 		try(FileInputStream fis = new FileInputStream(src);) {
 			

@@ -1,0 +1,201 @@
+[main] INFO  RestAssured  - ******checking Response Body**************
+[main] INFO  RestAssured  - Response Body===>{"id":"117463","employee_name":"Sandeep12341","employee_salary":"100000","employee_age":"22","profile_image":""}
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 2004
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - *******Completed TC001_Get_All_Employees Test ***********
+[main] INFO  RestAssured  - {
+    "FaultId": "OPERATION_SUCCESS",
+    "Fault": "Operation completed successfully",
+    "Username:Password": "ToolsQA:TestPassword",
+    "Authentication Type": "Basic"
+}
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking Response Body**************
+[main] INFO  RestAssured  - Response Body===>{"id":"117463","employee_name":"Sandeep12341","employee_salary":"100000","employee_age":"22","profile_image":""}
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 1429
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - *******Completed TC001_Get_All_Employees Test ***********
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'EMPNAME' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 1065
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Sand9' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 965
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Sand789' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 889
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'san789' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 1267
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'SAN4420' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 939
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'SAN329' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 977
+[main] INFO  RestAssured  - ******Finished Test**************
+[main] INFO  RestAssured  - ******checking Response Body**************
+[main] INFO  RestAssured  - Response Body===>{
+    "City": "Hyderabad",
+    "Temperature": "21.74 Degree celsius",
+    "Humidity": "83 Percent",
+    "WeatherDescription": "mist",
+    "WindSpeed": "3.37 Km per hour",
+    "WindDirectionDegree": "97 Degree"
+}
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 701
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - *******Completed TC001_Get_All_Employees Test ***********
+[main] INFO  RestAssured  - ******checking Response Body**************
+[main] INFO  RestAssured  - Response Body===>{"success":{"text":"successfully! deleted Records"}}
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 1300
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - *******Completed TC001_Get_All_Employees Test ***********
+[main] INFO  RestAssured  - <?xml version="1.0" encoding="UTF-8"?>
+<PlaceSearchResponse>
+ <status>REQUEST_DENIED</status>
+ <error_message>The provided API key is invalid.</error_message>
+</PlaceSearchResponse>
+
+[main] INFO  RestAssured  - Content-Type --> application/xml; charset=UTF-8
+[main] INFO  RestAssured  - Date --> Sun, 08 Dec 2019 16:21:46 GMT
+[main] INFO  RestAssured  - Pragma --> no-cache
+[main] INFO  RestAssured  - Expires --> Fri, 01 Jan 1990 00:00:00 GMT
+[main] INFO  RestAssured  - Cache-Control --> no-cache, must-revalidate
+[main] INFO  RestAssured  - Vary --> Accept-Language
+[main] INFO  RestAssured  - Content-Encoding --> gzip
+[main] INFO  RestAssured  - Server --> scaffolding on HTTPServer2
+[main] INFO  RestAssured  - X-XSS-Protection --> 0
+[main] INFO  RestAssured  - X-Frame-Options --> SAMEORIGIN
+[main] INFO  RestAssured  - Server-Timing --> gfet4t7; dur=213
+[main] INFO  RestAssured  - Alt-Svc --> quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000
+[main] INFO  RestAssured  - Transfer-Encoding --> chunked
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'EMPNAME' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 1213
+[main] INFO  RestAssured  - {"name":"Sandeep12341","salary":"100000.0","age":"22.0"}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 980
+[main] INFO  RestAssured  - ******Finished Test**************
+[main] INFO  RestAssured  - {
+    "FaultId": "OPERATION_SUCCESS",
+    "Fault": "Operation completed successfully",
+    "Username:Password": "ToolsQA:TestPassword",
+    "Authentication Type": "Basic"
+}
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking Response Body**************
+[main] INFO  RestAssured  - Response Body===>{"id":"117463","employee_name":"Sandeep12341","employee_salary":"100000","employee_age":"22","profile_image":""}
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 1083
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - *******Completed TC001_Get_All_Employees Test ***********
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'EMPNAME' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 1110
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Sand9' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 919
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Sand789' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 953
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'san789' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 946
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'SAN4420' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 927
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'SAN329' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 966
+[main] INFO  RestAssured  - ******Finished Test**************
+[main] INFO  RestAssured  - ******checking Response Body**************
+[main] INFO  RestAssured  - Response Body===>{
+    "City": "Hyderabad",
+    "Temperature": "21.74 Degree celsius",
+    "Humidity": "83 Percent",
+    "WeatherDescription": "mist",
+    "WindSpeed": "3.37 Km per hour",
+    "WindDirectionDegree": "97 Degree"
+}
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 1028
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - *******Completed TC001_Get_All_Employees Test ***********
+[main] INFO  RestAssured  - ******checking Response Body**************
+[main] INFO  RestAssured  - Response Body===>{"success":{"text":"successfully! deleted Records"}}
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 1079
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - *******Completed TC001_Get_All_Employees Test ***********
+[main] INFO  RestAssured  - <?xml version="1.0" encoding="UTF-8"?>
+<PlaceSearchResponse>
+ <status>REQUEST_DENIED</status>
+ <error_message>The provided API key is invalid.</error_message>
+</PlaceSearchResponse>
+
+[main] INFO  RestAssured  - Content-Type --> application/xml; charset=UTF-8
+[main] INFO  RestAssured  - Date --> Sun, 08 Dec 2019 16:22:47 GMT
+[main] INFO  RestAssured  - Pragma --> no-cache
+[main] INFO  RestAssured  - Expires --> Fri, 01 Jan 1990 00:00:00 GMT
+[main] INFO  RestAssured  - Cache-Control --> no-cache, must-revalidate
+[main] INFO  RestAssured  - Vary --> Accept-Language
+[main] INFO  RestAssured  - Content-Encoding --> gzip
+[main] INFO  RestAssured  - Server --> scaffolding on HTTPServer2
+[main] INFO  RestAssured  - X-XSS-Protection --> 0
+[main] INFO  RestAssured  - X-Frame-Options --> SAMEORIGIN
+[main] INFO  RestAssured  - Server-Timing --> gfet4t7; dur=211
+[main] INFO  RestAssured  - Alt-Svc --> quic=":443"; ma=2592000; v="46,43",h3-Q050=":443"; ma=2592000,h3-Q049=":443"; ma=2592000,h3-Q048=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000
+[main] INFO  RestAssured  - Transfer-Encoding --> chunked
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - {"error":{"text":SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'EMPNAME' for key 'employee_name_unique'}}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 1252
+[main] INFO  RestAssured  - {"name":"Sandeep12341","salary":"100000.0","age":"22.0"}
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 1224
+[main] INFO  RestAssured  - ******Finished Test**************
