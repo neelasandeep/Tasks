@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 22, Failures: 1, Errors: 0, Skipped: 3, Time elapsed: 11.286 s <<< FAILURE! - in TestSuite
+CheckResponseBody(testcases.TC002_Get_Single_Employee_Data)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at testcases.TC002_Get_Single_Employee_Data.CheckResponseBody(TC002_Get_Single_Employee_Data.java:26)
+

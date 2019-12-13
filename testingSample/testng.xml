@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+ <listeners>
+       
+       <listener class-name="utilities.AnnotationTransformer"/> 
+        <listener class-name="utilities.listeners.TestListenerr"/>
+    </listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="testcases.TC005_Auth"/>
+      <class name="testcases.TC002_Get_Single_Employee_Data"/>
+      <class name="testcases.TC003_Post_Employee_Record"/>
+      <class name="testcases.TC001_Get_All_Employees"/>
+      <class name="testcases.TC006_Delete_Emp_Record"/>
+      <class name="testcases.TC003_GET_Header"/>
+      <class name="testcases.TC004_PutEmployee_Record"/>
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

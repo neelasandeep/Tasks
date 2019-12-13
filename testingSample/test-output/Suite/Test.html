@@ -1,0 +1,174 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Dec 09 10:35:03 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>29 seconds (29875 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.TC002_Get_Single_Employee_Data.CheckResponseBody()'><b>CheckResponseBody</b><br>Test class: testcases.TC002_Get_Single_Employee_Data</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC002_Get_Single_Employee_Data@2473d930</td></tr>
+<tr>
+<td title='testcases.TC001_Get_All_Employees.CheckResponseBody()'><b>CheckResponseBody</b><br>Test class: testcases.TC001_Get_All_Employees</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC001_Get_All_Employees@49b0b76</td></tr>
+<tr>
+<td title='testcases.TC006_Delete_Emp_Record.CheckResponseBody()'><b>CheckResponseBody</b><br>Test class: testcases.TC006_Delete_Emp_Record</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC006_Delete_Emp_Record@769f71a9</td></tr>
+<tr>
+<td title='testcases.TC002_Get_Single_Employee_Data.CheckResponseTime()'><b>CheckResponseTime</b><br>Test class: testcases.TC002_Get_Single_Employee_Data</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC002_Get_Single_Employee_Data@2473d930</td></tr>
+<tr>
+<td title='testcases.TC001_Get_All_Employees.CheckResponseTime()'><b>CheckResponseTime</b><br>Test class: testcases.TC001_Get_All_Employees</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC001_Get_All_Employees@49b0b76</td></tr>
+<tr>
+<td title='testcases.TC006_Delete_Emp_Record.CheckResponseTime()'><b>CheckResponseTime</b><br>Test class: testcases.TC006_Delete_Emp_Record</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC006_Delete_Emp_Record@769f71a9</td></tr>
+<tr>
+<td title='testcases.TC002_Get_Single_Employee_Data.CheckStatusCode()'><b>CheckStatusCode</b><br>Test class: testcases.TC002_Get_Single_Employee_Data</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC002_Get_Single_Employee_Data@2473d930</td></tr>
+<tr>
+<td title='testcases.TC001_Get_All_Employees.CheckStatusCode()'><b>CheckStatusCode</b><br>Test class: testcases.TC001_Get_All_Employees</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC001_Get_All_Employees@49b0b76</td></tr>
+<tr>
+<td title='testcases.TC006_Delete_Emp_Record.CheckStatusCode()'><b>CheckStatusCode</b><br>Test class: testcases.TC006_Delete_Emp_Record</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC006_Delete_Emp_Record@769f71a9</td></tr>
+<tr>
+<td title='testcases.TC004_PutEmployee_Record.UpdateRecords()'><b>UpdateRecords</b><br>Test class: testcases.TC004_PutEmployee_Record<br>Parameters: EMPNAME%EMPSAL%EMPAGE%</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC004_PutEmployee_Record@5ae50ce6</td></tr>
+<tr>
+<td title='testcases.TC004_PutEmployee_Record.UpdateRecords()'><b>UpdateRecords</b><br>Test class: testcases.TC004_PutEmployee_Record<br>Parameters: Sandeep12341%100000.0%22.0%</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC004_PutEmployee_Record@5ae50ce6</td></tr>
+<tr>
+<td title='testcases.TC005_Auth.get()'><b>get</b><br>Test class: testcases.TC005_Auth</td>
+<td></td>
+<td>1</td>
+<td>testcases.TC005_Auth@76908cc0</td></tr>
+<tr>
+<td title='testcases.TC003_GET_Header.get()'><b>get</b><br>Test class: testcases.TC003_GET_Header</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC003_GET_Header@4c9f8c13</td></tr>
+<tr>
+<td title='testcases.TC003_Post_Employee_Record.postEmployee()'><b>postEmployee</b><br>Test class: testcases.TC003_Post_Employee_Record<br>Parameters: EMPNAME%EMPSAL%EMPAGE%</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC003_Post_Employee_Record@35047d03</td></tr>
+<tr>
+<td title='testcases.TC003_Post_Employee_Record.postEmployee()'><b>postEmployee</b><br>Test class: testcases.TC003_Post_Employee_Record<br>Parameters: Sand9%345564.0%25.0%</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC003_Post_Employee_Record@35047d03</td></tr>
+<tr>
+<td title='testcases.TC003_Post_Employee_Record.postEmployee()'><b>postEmployee</b><br>Test class: testcases.TC003_Post_Employee_Record<br>Parameters: Sand789%35353.0%46.0%</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC003_Post_Employee_Record@35047d03</td></tr>
+<tr>
+<td title='testcases.TC003_Post_Employee_Record.postEmployee()'><b>postEmployee</b><br>Test class: testcases.TC003_Post_Employee_Record<br>Parameters: san789%546754.0%37.0%</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC003_Post_Employee_Record@35047d03</td></tr>
+<tr>
+<td title='testcases.TC003_Post_Employee_Record.postEmployee()'><b>postEmployee</b><br>Test class: testcases.TC003_Post_Employee_Record<br>Parameters: SAN4420%46456.0%38.0%</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC003_Post_Employee_Record@35047d03</td></tr>
+<tr>
+<td title='testcases.TC003_Post_Employee_Record.postEmployee()'><b>postEmployee</b><br>Test class: testcases.TC003_Post_Employee_Record<br>Parameters: SAN329%34566.0%44.0%</td>
+<td></td>
+<td>0</td>
+<td>testcases.TC003_Post_Employee_Record@35047d03</td></tr>
+</table><p>
+</body>
+</html>

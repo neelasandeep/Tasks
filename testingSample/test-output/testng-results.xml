@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="72436" started-at="2019-12-13T20:08:58 IST" finished-at="2019-12-13T20:10:11 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="72436" started-at="2019-12-13T20:08:58 IST" finished-at="2019-12-13T20:10:11 IST">
+      <class name="testRunner.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:testRunner.TestRunner@78b66d36]" name="setUpClass" is-config="true" duration-ms="247" started-at="2019-12-13T20:08:58 IST" finished-at="2019-12-13T20:08:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testRunner.TestRunner@78b66d36]" name="feature" duration-ms="71875" started-at="2019-12-13T20:08:59 IST" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-12-13T20:10:11 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Movie Booking Login Feature]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:testRunner.TestRunner@78b66d36]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2019-12-13T20:10:11 IST" finished-at="2019-12-13T20:10:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunner.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,1 @@
+{"uuid":"aee487bf-bfde-42e6-b12e-878bde606362","name":"testcases.TC005_Auth","children":["d0257fbc-97bb-4615-af41-d6b0460b5477"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1576230305351,"stop":1576230305351}],"afters":[],"links":[],"start":1576230292121,"stop":1576230326443}
