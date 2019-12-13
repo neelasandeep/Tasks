@@ -3,13 +3,52 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="testcases.TC003_GET_Header">
+        <methods>
+          <include name="get"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.TC003_GET_Header -->
       <class name="testcases.TC004_PutEmployee_Record">
         <methods>
-          <include name="UpdateRecords" invocation-numbers="0"/>
+          <include name="UpdateRecords" invocation-numbers="0 1"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testcases.TC004_PutEmployee_Record -->
+      <class name="testcases.TC006_Delete_Emp_Record">
+        <methods>
+          <include name="CheckResponseBody"/>
+          <include name="CheckResponseTime"/>
+          <include name="CheckStatusCode"/>
+          <include name="setUp"/>
+          <include name="deleteRecord"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testcases.TC006_Delete_Emp_Record -->
+      <class name="testcases.TC002_Get_Single_Employee_Data">
+        <methods>
+          <include name="getEmployees"/>
+          <include name="tearDown"/>
+          <include name="CheckStatusCode"/>
+          <include name="CheckResponseTime"/>
+          <include name="setUp"/>
+          <include name="CheckResponseBody"/>
+        </methods>
+      </class> <!-- testcases.TC002_Get_Single_Employee_Data -->
+      <class name="testcases.TC003_Post_Employee_Record">
+        <methods>
+          <include name="tearDown"/>
+          <include name="postEmployee" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.TC003_Post_Employee_Record -->
+      <class name="testcases.TC005_Auth">
+        <methods>
+          <include name="setUp"/>
+          <include name="get"/>
+        </methods>
+      </class> <!-- testcases.TC005_Auth -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

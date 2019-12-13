@@ -1,217 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="19" passed="19" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-12-08T21:52:31 IST" name="Suite" finished-at="2019-12-08T21:52:49 IST" duration-ms="18483">
+  <suite name="Default suite" duration-ms="19659" started-at="2019-12-13T15:53:18 IST" finished-at="2019-12-13T15:53:38 IST">
     <groups>
     </groups>
-    <test started-at="2019-12-08T21:52:31 IST" name="Test" finished-at="2019-12-08T21:52:49 IST" duration-ms="18483">
-      <class name="testcases.TC003_Post_Employee_Record">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TC003_Post_Employee_Record@79c97cb]" started-at="2019-12-08T21:52:34 IST" name="setUp" finished-at="2019-12-08T21:52:34 IST" duration-ms="2" status="PASS">
+    <test name="Default test" duration-ms="19659" started-at="2019-12-13T15:53:18 IST" finished-at="2019-12-13T15:53:38 IST">
+      <class name="testRunner.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:testRunner.TestRunner@78b66d36]" name="setUpClass" is-config="true" duration-ms="222" started-at="2019-12-13T15:53:18 IST" finished-at="2019-12-13T15:53:18 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="postEmployee(java.lang.String)[pri:0, instance:testcases.TC003_Post_Employee_Record@79c97cb]" started-at="2019-12-08T21:52:35 IST" name="postEmployee" data-provider="empdata" finished-at="2019-12-08T21:52:36 IST" duration-ms="1129" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:testRunner.TestRunner@78b66d36]" name="feature" duration-ms="19087" started-at="2019-12-13T15:53:19 IST" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-12-13T15:53:38 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[EMPNAME%EMPSAL%EMPAGE%]]>
+                <![CDATA[Movie Booking seating Feature]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postEmployee -->
-        <test-method signature="postEmployee(java.lang.String)[pri:0, instance:testcases.TC003_Post_Employee_Record@79c97cb]" started-at="2019-12-08T21:52:36 IST" name="postEmployee" data-provider="empdata" finished-at="2019-12-08T21:52:37 IST" duration-ms="930" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sand9%345564.0%25.0%]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:testRunner.TestRunner@78b66d36]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2019-12-13T15:53:38 IST" finished-at="2019-12-13T15:53:38 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- postEmployee -->
-        <test-method signature="postEmployee(java.lang.String)[pri:0, instance:testcases.TC003_Post_Employee_Record@79c97cb]" started-at="2019-12-08T21:52:37 IST" name="postEmployee" data-provider="empdata" finished-at="2019-12-08T21:52:38 IST" duration-ms="963" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sand789%35353.0%46.0%]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postEmployee -->
-        <test-method signature="postEmployee(java.lang.String)[pri:0, instance:testcases.TC003_Post_Employee_Record@79c97cb]" started-at="2019-12-08T21:52:38 IST" name="postEmployee" data-provider="empdata" finished-at="2019-12-08T21:52:39 IST" duration-ms="955" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[san789%546754.0%37.0%]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postEmployee -->
-        <test-method signature="postEmployee(java.lang.String)[pri:0, instance:testcases.TC003_Post_Employee_Record@79c97cb]" started-at="2019-12-08T21:52:39 IST" name="postEmployee" data-provider="empdata" finished-at="2019-12-08T21:52:40 IST" duration-ms="936" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[SAN4420%46456.0%38.0%]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postEmployee -->
-        <test-method signature="postEmployee(java.lang.String)[pri:0, instance:testcases.TC003_Post_Employee_Record@79c97cb]" started-at="2019-12-08T21:52:40 IST" name="postEmployee" data-provider="empdata" finished-at="2019-12-08T21:52:41 IST" duration-ms="973" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[SAN329%34566.0%44.0%]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postEmployee -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TC003_Post_Employee_Record@79c97cb]" started-at="2019-12-08T21:52:41 IST" name="tearDown" finished-at="2019-12-08T21:52:41 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testcases.TC003_Post_Employee_Record -->
-      <class name="testcases.TC004_PutEmployee_Record">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TC004_PutEmployee_Record@27e47833]" started-at="2019-12-08T21:52:47 IST" name="setUp" finished-at="2019-12-08T21:52:47 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="UpdateRecords(java.lang.String)[pri:0, instance:testcases.TC004_PutEmployee_Record@27e47833]" started-at="2019-12-08T21:52:47 IST" name="UpdateRecords" data-provider="updatedata" finished-at="2019-12-08T21:52:48 IST" duration-ms="1259" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[EMPNAME%EMPSAL%EMPAGE%]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UpdateRecords -->
-        <test-method signature="UpdateRecords(java.lang.String)[pri:0, instance:testcases.TC004_PutEmployee_Record@27e47833]" started-at="2019-12-08T21:52:48 IST" name="UpdateRecords" data-provider="updatedata" finished-at="2019-12-08T21:52:49 IST" duration-ms="1233" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sandeep12341%100000.0%22.0%]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UpdateRecords -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TC004_PutEmployee_Record@27e47833]" started-at="2019-12-08T21:52:49 IST" name="tearDown" finished-at="2019-12-08T21:52:49 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testcases.TC004_PutEmployee_Record -->
-      <class name="testcases.TC003_GET_Header">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TC003_GET_Header@44a59da3]" started-at="2019-12-08T21:52:45 IST" name="setUp" finished-at="2019-12-08T21:52:45 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="get()[pri:0, instance:testcases.TC003_GET_Header@44a59da3]" started-at="2019-12-08T21:52:45 IST" name="get" finished-at="2019-12-08T21:52:47 IST" duration-ms="1245" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- get -->
-      </class> <!-- testcases.TC003_GET_Header -->
-      <class name="testcases.TC006_Delete_Emp_Record">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TC006_Delete_Emp_Record@42a15bdc]" started-at="2019-12-08T21:52:42 IST" name="setUp" finished-at="2019-12-08T21:52:42 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="deleteRecord()[pri:0, instance:testcases.TC006_Delete_Emp_Record@42a15bdc]" started-at="2019-12-08T21:52:42 IST" name="deleteRecord" finished-at="2019-12-08T21:52:45 IST" duration-ms="3063" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteRecord -->
-        <test-method signature="CheckResponseBody()[pri:0, instance:testcases.TC006_Delete_Emp_Record@42a15bdc]" started-at="2019-12-08T21:52:45 IST" name="CheckResponseBody" finished-at="2019-12-08T21:52:45 IST" duration-ms="9" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckResponseBody -->
-        <test-method signature="CheckResponseTime()[pri:0, instance:testcases.TC006_Delete_Emp_Record@42a15bdc]" started-at="2019-12-08T21:52:45 IST" name="CheckResponseTime" finished-at="2019-12-08T21:52:45 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckResponseTime -->
-        <test-method signature="CheckStatusCode()[pri:0, instance:testcases.TC006_Delete_Emp_Record@42a15bdc]" started-at="2019-12-08T21:52:45 IST" name="CheckStatusCode" finished-at="2019-12-08T21:52:45 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckStatusCode -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TC006_Delete_Emp_Record@42a15bdc]" started-at="2019-12-08T21:52:45 IST" name="tearDown" finished-at="2019-12-08T21:52:45 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testcases.TC006_Delete_Emp_Record -->
-      <class name="testcases.TC001_Get_All_Employees">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TC001_Get_All_Employees@2d9caaeb]" started-at="2019-12-08T21:52:41 IST" name="setUp" finished-at="2019-12-08T21:52:41 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="getEmployees()[pri:0, instance:testcases.TC001_Get_All_Employees@2d9caaeb]" started-at="2019-12-08T21:52:41 IST" name="getEmployees" finished-at="2019-12-08T21:52:42 IST" duration-ms="1031" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getEmployees -->
-        <test-method signature="CheckResponseBody()[pri:0, instance:testcases.TC001_Get_All_Employees@2d9caaeb]" started-at="2019-12-08T21:52:42 IST" name="CheckResponseBody" finished-at="2019-12-08T21:52:42 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckResponseBody -->
-        <test-method signature="CheckResponseTime()[pri:0, instance:testcases.TC001_Get_All_Employees@2d9caaeb]" started-at="2019-12-08T21:52:42 IST" name="CheckResponseTime" finished-at="2019-12-08T21:52:42 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckResponseTime -->
-        <test-method signature="CheckStatusCode()[pri:0, instance:testcases.TC001_Get_All_Employees@2d9caaeb]" started-at="2019-12-08T21:52:42 IST" name="CheckStatusCode" finished-at="2019-12-08T21:52:42 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckStatusCode -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TC001_Get_All_Employees@2d9caaeb]" started-at="2019-12-08T21:52:42 IST" name="tearDown" finished-at="2019-12-08T21:52:42 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testcases.TC001_Get_All_Employees -->
-      <class name="testcases.TC002_Get_Single_Employee_Data">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TC002_Get_Single_Employee_Data@29a5f4e7]" started-at="2019-12-08T21:52:33 IST" name="setUp" finished-at="2019-12-08T21:52:33 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="getEmployees()[pri:0, instance:testcases.TC002_Get_Single_Employee_Data@29a5f4e7]" started-at="2019-12-08T21:52:33 IST" name="getEmployees" finished-at="2019-12-08T21:52:34 IST" duration-ms="1090" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getEmployees -->
-        <test-method signature="CheckResponseBody()[pri:0, instance:testcases.TC002_Get_Single_Employee_Data@29a5f4e7]" started-at="2019-12-08T21:52:34 IST" name="CheckResponseBody" finished-at="2019-12-08T21:52:34 IST" duration-ms="17" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckResponseBody -->
-        <test-method signature="CheckResponseTime()[pri:0, instance:testcases.TC002_Get_Single_Employee_Data@29a5f4e7]" started-at="2019-12-08T21:52:34 IST" name="CheckResponseTime" finished-at="2019-12-08T21:52:34 IST" duration-ms="9" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckResponseTime -->
-        <test-method signature="CheckStatusCode()[pri:0, instance:testcases.TC002_Get_Single_Employee_Data@29a5f4e7]" started-at="2019-12-08T21:52:34 IST" name="CheckStatusCode" finished-at="2019-12-08T21:52:34 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckStatusCode -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.TC002_Get_Single_Employee_Data@29a5f4e7]" started-at="2019-12-08T21:52:34 IST" name="tearDown" finished-at="2019-12-08T21:52:34 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testcases.TC002_Get_Single_Employee_Data -->
-      <class name="testcases.TC005_Auth">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.TC005_Auth@52e7a6b2]" started-at="2019-12-08T21:52:31 IST" name="setUp" finished-at="2019-12-08T21:52:31 IST" duration-ms="51" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="get()[pri:0, instance:testcases.TC005_Auth@52e7a6b2]" started-at="2019-12-08T21:52:31 IST" name="get" finished-at="2019-12-08T21:52:33 IST" duration-ms="2243" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- get -->
-      </class> <!-- testcases.TC005_Auth -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testRunner.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

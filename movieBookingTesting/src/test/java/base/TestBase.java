@@ -26,10 +26,11 @@ public class TestBase {
 	@BeforeClass
 	public void setUp() {
 
-		PropertyConfigurator.configure(System.getProperty("user.dir") + "\\resources\\log4j.properties");
+		PropertyConfigurator.configure(System.getProperty("user.dir") + "/src/main/java/resources/log4j.properties");
 		logger = Logger.getLogger("RestAssured");
 		config = new ConfigDataprovider();
-		empId = config.getEmpId();
+		empId = "111";
+				
 
 	}
 

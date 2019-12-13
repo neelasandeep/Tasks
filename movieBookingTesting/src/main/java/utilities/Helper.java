@@ -14,9 +14,12 @@ import org.openqa.selenium.io.FileHandler;
 
 
 public class Helper{
+	private Helper() {
+		
+	}
 	static Logger logger = Logger.getLogger(Helper.class);
 
-	public static String ScreenShots(WebDriver driver) {
+	public static String screenShots(WebDriver driver) {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
          String screenshotpath=System.getProperty("user.dir")+"/ScreenShots/Testmakemytrip"+getCurrentDateTime()+".png";
 		try {

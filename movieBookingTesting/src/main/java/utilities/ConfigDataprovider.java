@@ -12,9 +12,9 @@ public class ConfigDataprovider {
 	Logger logger = Logger.getLogger(ConfigDataprovider.class);
 
 	public ConfigDataprovider() {
-		File src = new File("./configurations/Config.properties");
-		try {
-			FileInputStream fis = new FileInputStream(src);
+		File src = new File("src/main/java/configurations/Config2.properties");
+		try (FileInputStream fis = new FileInputStream(src);){
+			
 			properties = new Properties();
 			properties.load(fis);
 		} catch (Exception e) {
@@ -27,10 +27,7 @@ public class ConfigDataprovider {
 		return properties.getProperty(key);
 	}
 
-	public String getBrowser() {
-
-		return properties.getProperty("Browser");
-	}
+	
 	public String getChrome() {
 
 		return properties.getProperty("chromeBrowser");
@@ -44,24 +41,24 @@ public class ConfigDataprovider {
 		return properties.getProperty("hotelsUrl");
 
 	}
-	public String getApiURI() {
-
-		return properties.getProperty("apiUri");
+	
+	public String getmovieURL() {
+		return properties.getProperty("moviebooking");
 	}
-	public String getCity() {
-
-		return properties.getProperty("city");
+	
+	public String getLocationURI() {
+		return properties.getProperty("getemployee");
 	}
-	public String getpostURI() {
-
-		return properties.getProperty("post");
+	public String getMovieURI() {
+		return properties.getProperty("getMovies");
 	}
-	public String getPOSTPath() {
-
-		return properties.getProperty("postpath");
+	public String getlocationIdURI() {
+		return properties.getProperty("locationId");
 	}
-	public String getEmpId() {
-
-		return properties.getProperty("empId");
+	public String getmovieIdURI() {
+		return properties.getProperty("movieid");
+	}
+	public String getbaseURI() {
+		return properties.getProperty("moviebookbaseuri");
 	}
 }

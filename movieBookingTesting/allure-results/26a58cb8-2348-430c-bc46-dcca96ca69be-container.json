@@ -1,1 +1,0 @@
-{"uuid":"26a58cb8-2348-430c-bc46-dcca96ca69be","name":"testcases.TC003_GET_Header","children":["5fef4406-e074-483b-8bd9-982aaf3e84fb"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1575822165790,"stop":1575822165792}],"afters":[],"links":[],"start":1575822151335,"stop":1575822170310}

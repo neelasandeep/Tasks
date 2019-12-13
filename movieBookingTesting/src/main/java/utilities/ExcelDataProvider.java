@@ -2,8 +2,7 @@ package utilities;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,26 +14,20 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ExcelDataProvider {
 	XSSFWorkbook workBook;
 	XSSFSheet workSheet;
-	public XSSFRow Row;
+	 XSSFRow row;
 	
 	Logger logger = Logger.getLogger(ExcelDataProvider.class);
-	String line="";
+	String line;
 	public ExcelDataProvider() {
-		//File src = new File("./TestData/TestData.xlsx");
-		File src = new File("./test-data/dataforEmp.xlsx");
-		//FileInputStream fis;
+		
+		File src = new File("./src/main/java/test-data/dataforEmp.xlsx");
+		
 		try(FileInputStream fis = new FileInputStream(src);) {
 			
 
 			workBook = new XSSFWorkbook(fis);
 
-		} catch (FileNotFoundException e) {
-
-			e.printStackTrace();
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		} catch (Exception e) {
+		}  catch (Exception e) {
 			logger.warn("Unable to Read Excel File" + e.getMessage());
 		}
 
@@ -44,10 +37,10 @@ public class ExcelDataProvider {
 		List<String> urlString = new ArrayList<>();
 		workSheet = workBook.getSheetAt(sheetName);
 		for (int i = 0; i < workSheet.getLastRowNum() + 1; i++) {
-			Row = workSheet.getRow(i);
+			row = workSheet.getRow(i);
 		
-			for (int j = 0; j < Row.getLastCellNum(); j++) {
-				line+=String.valueOf(Row.getCell(j))+"%";
+			for (int j = 0; j < row.getLastCellNum(); j++) {
+				line+=String.valueOf(row.getCell(j))+"%";
 				
 			}
 			urlString.add(line);

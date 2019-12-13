@@ -13,7 +13,8 @@ import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 import utilities.listeners.TestListenerr;
 
-@CucumberOptions(features = "src/main/java/features", glue = { "stepdefs" },tags= {"@flights"}
+@CucumberOptions(features = "src/main/java/features", glue = { "stepdefs" }
+,tags= {"@SeatPage"}
 
 )
 @Listeners({ TestListenerr.class })

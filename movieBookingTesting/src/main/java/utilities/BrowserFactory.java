@@ -15,6 +15,9 @@ public class BrowserFactory {
 	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 	static DesiredCapabilities caps = new DesiredCapabilities();
 
+	private BrowserFactory() {
+	}
+
 	public static WebDriver startApplication(WebDriver driver, String browserName) throws MalformedURLException {
 		switch (browserName) {
 		case "Firefox":
@@ -38,30 +41,36 @@ public class BrowserFactory {
 			driver = new RemoteWebDriver(new URL(URL), caps);
 			break;
 		case "Chrome":
-		
 
-			caps.setBrowserName("Chrome");
+			
+			break;
+		default:
 
-			caps.setVersion("55.0");
-
-			caps.setPlatform(Platform.WINDOWS);
-
-			driver = new RemoteWebDriver(new URL(URL), caps);
+			
 			break;
 
 		}
 
 		return driver;
 	}
+  
+	public WebDriver callChromeBrowser() throws MalformedURLException {
+		caps.setBrowserName("Chrome");
 
-	public static WebDriver startBrowser()  {
-        
-		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
-		
-		WebDriver driver=new ChromeDriver();
-		return driver;
+		caps.setVersion("55.0");
+
+		caps.setPlatform(Platform.WINDOWS);
+
+		return new RemoteWebDriver(new URL(URL), caps);
 	}
-    
+	public static WebDriver startBrowser() {
+
+		System.setProperty("webdriver.chrome.driver", "src/main/java/drivers/chromedriver.exe");
+
+		return new ChromeDriver();
+		 
+	}
+
 	public static void quitBrowser(WebDriver driver) {
 		driver.quit();
 	}
