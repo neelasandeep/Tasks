@@ -2107,3 +2107,17 @@ __ez.queue.addFile('jellyfish.php', '/porpoiseant/jellyfish.webp?a=a&cb=188-3&sh
 [main] INFO  RestAssured  - ******checking ResponseTime**************
 [main] INFO  RestAssured  - 1276
 [main] INFO  RestAssured  - ******Finished Test**************
+[main] INFO  RestAssured  - ******checking Response Body**************
+[main] INFO  RestAssured  - Response Body===>{
+    "City": "Hyderabad",
+    "Temperature": "21.75 Degree celsius",
+    "Humidity": "83 Percent",
+    "WeatherDescription": "mist",
+    "WindSpeed": "3.37 Km per hour",
+    "WindDirectionDegree": "97 Degree"
+}
+[main] INFO  RestAssured  - ******checking ResponseTime**************
+[main] INFO  RestAssured  - 1595
+[main] INFO  RestAssured  - ******checking Status Code**************
+[main] INFO  RestAssured  - 200
+[main] INFO  RestAssured  - *******Completed TC001_Get_All_Employees Test ***********

@@ -1,0 +1,158 @@
+[main] INFO  emailreader.UsingImap  - Email Count=391
+[main] INFO  emailreader.UsingImap  - 391
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:24:31 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:21:52 IST 2019
+[main] INFO  emailreader.UsingImap  - Text found : 98767
+[main] INFO  emailreader.UsingImap  - ---------------------------------
+[main] INFO  emailreader.UsingImap  - Email Number 391
+[main] INFO  emailreader.UsingImap  - Subject: Testing otp
+[main] INFO  emailreader.UsingImap  - From: NoReply-JD <primesonprime@gmail.com>
+[main] INFO  emailreader.UsingImap  - Email Count=391
+[main] INFO  emailreader.UsingImap  - 391
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:25:34 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:21:52 IST 2019
+[main] INFO  emailreader.UsingImap  - Text found : 98767
+[main] INFO  emailreader.UsingImap  - ---------------------------------
+[main] INFO  emailreader.UsingImap  - Email Number 391
+[main] INFO  emailreader.UsingImap  - Subject: Testing otp
+[main] INFO  emailreader.UsingImap  - From: NoReply-JD <primesonprime@gmail.com>
+[main] INFO  emailreader.UsingImap  - Email Count=391
+[main] INFO  emailreader.UsingImap  - 391
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:28:04 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:21:52 IST 2019
+[main] INFO  emailreader.UsingImap  - Text found : 98767
+[main] INFO  emailreader.UsingImap  - ---------------------------------
+[main] INFO  emailreader.UsingImap  - Email Number 391
+[main] INFO  emailreader.UsingImap  - Subject: Testing otp
+[main] INFO  emailreader.UsingImap  - From: NoReply-JD <primesonprime@gmail.com>
+[main] INFO  emailreader.UsingImap  - Email Count=391
+[main] INFO  emailreader.UsingImap  - 391
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:29:28 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:21:52 IST 2019
+[main] INFO  emailreader.UsingImap  - Text found : 98767
+[main] INFO  emailreader.UsingImap  - ---------------------------------
+[main] INFO  emailreader.UsingImap  - Email Number 391
+[main] INFO  emailreader.UsingImap  - Subject: Testing otp
+[main] INFO  emailreader.UsingImap  - From: NoReply-JD <primesonprime@gmail.com>
+[main] INFO  emailreader.UsingImap  - type: TEXT/PLAIN; charset=UTF-8
+[main] INFO  emailreader.UsingImap  - Email Count=391
+[main] INFO  emailreader.UsingImap  - 391
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:30:35 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:21:52 IST 2019
+[main] INFO  emailreader.UsingImap  - Text found : 98767
+[main] INFO  emailreader.UsingImap  - ---------------------------------
+[main] INFO  emailreader.UsingImap  - Email Number 391
+[main] INFO  emailreader.UsingImap  - Subject: Testing otp
+[main] INFO  emailreader.UsingImap  - From: NoReply-JD <primesonprime@gmail.com>
+[main] INFO  emailreader.UsingImap  - type: TEXT/PLAIN; charset=UTF-8
+[main] INFO  emailreader.UsingImap  - Email Count=392
+[main] INFO  emailreader.UsingImap  - 392
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:31:01 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:30:23 IST 2019
+[main] INFO  emailreader.UsingImap  - Email Count=392
+[main] INFO  emailreader.UsingImap  - 392
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:31:47 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:30:23 IST 2019
+[main] INFO  emailreader.UsingImap  - Email Count=392
+[main] INFO  emailreader.UsingImap  - 392
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:32:04 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:30:23 IST 2019
+[main] INFO  emailreader.UsingImap  - Text found : 12345
+[main] INFO  emailreader.UsingImap  - ---------------------------------
+[main] INFO  emailreader.UsingImap  - Email Number 392
+[main] INFO  emailreader.UsingImap  - Subject: Testing otp
+[main] INFO  emailreader.UsingImap  - From: neela sandeep <neelasandeep199@gmail.com>
+[main] INFO  emailreader.UsingImap  - type: multipart/ALTERNATIVE; boundary=0000000000004409290599bdae10
+[main] INFO  emailreader.UsingImap  - Body: Ypur otp is 12345
+
+[main] INFO  emailreader.UsingImap  - Body: <div dir="auto">Ypur otp is 12345</div>
+
+[main] INFO  emailreader.UsingImap  - Email Count=392
+[main] INFO  emailreader.UsingImap  - 392
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:36:35 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:30:23 IST 2019
+[main] INFO  emailreader.UsingImap  - Text found : 12345
+[main] INFO  emailreader.UsingImap  - ---------------------------------
+[main] INFO  emailreader.UsingImap  - Email Number 392
+[main] INFO  emailreader.UsingImap  - Subject: Testing otp
+[main] INFO  emailreader.UsingImap  - From: neela sandeep <neelasandeep199@gmail.com>
+[main] INFO  emailreader.UsingImap  - type: multipart/ALTERNATIVE; boundary=0000000000004409290599bdae10
+[main] INFO  emailreader.UsingImap  - Body: Ypur otp is 12345
+
+[main] INFO  emailreader.UsingImap  - Ypur otp is 12345
+
+[main] INFO  emailreader.UsingImap  - Body: <div dir="auto">Ypur otp is 12345</div>
+
+[main] INFO  emailreader.UsingImap  - <div dir="auto">Ypur otp is 12345</div>
+
+[main] INFO  emailreader.UsingImap  - Email Count=392
+[main] INFO  emailreader.UsingImap  - 392
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:40:02 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:30:23 IST 2019
+[main] INFO  emailreader.UsingImap  - Text found : 12345
+[main] INFO  emailreader.UsingImap  - ---------------------------------
+[main] INFO  emailreader.UsingImap  - Email Number 392
+[main] INFO  emailreader.UsingImap  - Subject: Testing otp
+[main] INFO  emailreader.UsingImap  - From: neela sandeep <neelasandeep199@gmail.com>
+[main] INFO  emailreader.UsingImap  - type: multipart/ALTERNATIVE; boundary=0000000000004409290599bdae10
+[main] INFO  emailreader.UsingImap  - Email Count=393
+[main] INFO  emailreader.UsingImap  - 393
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:40:34 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:40:23 IST 2019
+[main] INFO  emailreader.UsingImap  - Email Count=391
+[main] INFO  emailreader.UsingImap  - 391
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:41:18 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:41:07 IST 2019
+[main] INFO  emailreader.UsingImap  - Text found : 98767
+[main] INFO  emailreader.UsingImap  - ---------------------------------
+[main] INFO  emailreader.UsingImap  - Email Number 391
+[main] INFO  emailreader.UsingImap  - Subject: Testing otp
+[main] INFO  emailreader.UsingImap  - From: NoReply-JD <primesonprime@gmail.com>
+[main] INFO  emailreader.UsingImap  - type: TEXT/PLAIN; charset=us-ascii
+[main] INFO  emailreader.UsingImap  - Email Count=391
+[main] INFO  emailreader.UsingImap  - 391
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:42:54 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:42:43 IST 2019
+[main] INFO  emailreader.UsingImap  - Text found : 00009
+[main] INFO  emailreader.UsingImap  - ---------------------------------
+[main] INFO  emailreader.UsingImap  - Email Number 391
+[main] INFO  emailreader.UsingImap  - Subject: Testing otp
+[main] INFO  emailreader.UsingImap  - From: NoReply-JD <primesonprime@gmail.com>
+[main] INFO  emailreader.UsingImap  - type: TEXT/PLAIN; charset=us-ascii
+[main] INFO  emailreader.UsingImap  - Email Count=391
+[main] INFO  emailreader.UsingImap  - 391
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:50:34 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:42:43 IST 2019
+[main] INFO  emailreader.UsingImap  - Text found : 00009
+[main] INFO  emailreader.UsingImap  - ---------------------------------
+[main] INFO  emailreader.UsingImap  - Email Number 391
+[main] INFO  emailreader.UsingImap  - Subject: Testing otp
+[main] INFO  emailreader.UsingImap  - From: NoReply-JD <primesonprime@gmail.com>
+[main] INFO  emailreader.UsingImap  - type: TEXT/PLAIN; charset=us-ascii
+[main] INFO  emailreader.UsingImap  - Email Count=391
+[main] INFO  emailreader.UsingImap  - 391
+[main] INFO  emailreader.UsingImap  - 0
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:51:58 IST 2019
+[main] INFO  emailreader.UsingImap  - Sun Dec 15 18:42:43 IST 2019
+[main] INFO  emailreader.UsingImap  - Text found : 00009
+[main] INFO  emailreader.UsingImap  - ---------------------------------
+[main] INFO  emailreader.UsingImap  - Email Number 391
+[main] INFO  emailreader.UsingImap  - Subject: Testing otp
+[main] INFO  emailreader.UsingImap  - From: NoReply-JD <primesonprime@gmail.com>
+[main] INFO  emailreader.UsingImap  - type: TEXT/PLAIN; charset=us-ascii
+[main] INFO  emailreader.UsingImap  - Your otp is 00009
+

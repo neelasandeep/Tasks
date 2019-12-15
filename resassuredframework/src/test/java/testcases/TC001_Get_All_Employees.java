@@ -18,7 +18,7 @@ public class TC001_Get_All_Employees extends TestBase {
 		 httpRequest=RestAssured.given();
 		 response= httpRequest.request(Method.GET,config.getCity());
 	}
-	
+
 	@Test
 	void CheckResponseBody() {
 		logger.info("******checking Response Body**************");
