@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestRunner.TestRunner" duration-ms="223570" started-at="2019-12-27T18:11:29 IST" finished-at="2019-12-27T18:15:13 IST">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="223570" started-at="2019-12-27T18:11:29 IST" finished-at="2019-12-27T18:15:13 IST">
+      <class name="TestRunner.TestRunner">
+        <test-method status="PASS" signature="setupSuite()[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="setupSuite" is-config="true" duration-ms="635" started-at="2019-12-27T18:11:28 IST" finished-at="2019-12-27T18:11:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="setUpClass" is-config="true" duration-ms="215" started-at="2019-12-27T18:11:29 IST" finished-at="2019-12-27T18:11:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="feature" duration-ms="46692" started-at="2019-12-27T18:11:29 IST" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-12-27T18:12:16 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Applying filters]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="screenShotOnFailure" is-config="true" duration-ms="1186" started-at="2019-12-27T18:12:17 IST" finished-at="2019-12-27T18:12:18 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=feature status=SUCCESS method=TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.TestRunner@3c72f59f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenShotOnFailure -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="teardown" is-config="true" duration-ms="872" started-at="2019-12-27T18:12:18 IST" finished-at="2019-12-27T18:12:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="feature" duration-ms="65478" started-at="2019-12-27T18:12:19 IST" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-12-27T18:13:25 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Reviwing and continue For furthur]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="screenShotOnFailure" is-config="true" duration-ms="439" started-at="2019-12-27T18:13:25 IST" finished-at="2019-12-27T18:13:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=feature status=SUCCESS method=TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.TestRunner@3c72f59f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenShotOnFailure -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="teardown" is-config="true" duration-ms="750" started-at="2019-12-27T18:13:26 IST" finished-at="2019-12-27T18:13:26 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="feature" duration-ms="58824" started-at="2019-12-27T18:13:26 IST" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-12-27T18:14:25 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Filling traveller Details]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="screenShotOnFailure" is-config="true" duration-ms="501" started-at="2019-12-27T18:14:26 IST" finished-at="2019-12-27T18:14:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=feature status=SUCCESS method=TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.TestRunner@3c72f59f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenShotOnFailure -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="teardown" is-config="true" duration-ms="844" started-at="2019-12-27T18:14:26 IST" finished-at="2019-12-27T18:14:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="feature" duration-ms="42779" started-at="2019-12-27T18:14:27 IST" description="Runs Cucumber Feature" data-provider="features" finished-at="2019-12-27T18:15:10 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Searching for flighjts]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="screenShotOnFailure(org.testng.ITestResult)[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="screenShotOnFailure" is-config="true" duration-ms="823" started-at="2019-12-27T18:15:11 IST" finished-at="2019-12-27T18:15:12 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=feature status=SUCCESS method=TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRunner.TestRunner@3c72f59f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenShotOnFailure -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="teardown" is-config="true" duration-ms="828" started-at="2019-12-27T18:15:12 IST" finished-at="2019-12-27T18:15:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:TestRunner.TestRunner@3c72f59f]" name="tearDownClass" is-config="true" duration-ms="3" started-at="2019-12-27T18:15:13 IST" finished-at="2019-12-27T18:15:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- TestRunner.TestRunner -->
+    </test> <!-- Command line test -->
+  </suite> <!-- TestRunner.TestRunner -->
+</testng-results>
