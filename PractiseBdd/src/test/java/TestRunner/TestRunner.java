@@ -21,8 +21,8 @@ import org.testng.annotations.Listeners;
 
 
 
-@CucumberOptions(features = "src/main/java/Features", glue = { "stepdefs" }
-,tags={"@Traveller"}
+@CucumberOptions(features = "src/test/resources/Features", glue = { "stepdefs" }
+,tags={"@FlightsSearch"}
       //, plugin = { "pretty",
 	//	"html:target/cucumber-reports/cucumber-pretty", "json:target/cucumber-jsonReports/CucumberTestReport.json",
 //	                "rerun:target/cucumber-reports/rerun.txt"

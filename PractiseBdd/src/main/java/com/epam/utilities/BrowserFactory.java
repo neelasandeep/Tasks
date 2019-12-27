@@ -68,7 +68,7 @@ public class BrowserFactory {
 
 	public static WebDriver startBrowser() {
 
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./src/main/java/drivers/chromedriver.exe");
 
 		return new ChromeDriver();
 	}

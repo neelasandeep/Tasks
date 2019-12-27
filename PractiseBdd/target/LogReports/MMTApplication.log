@@ -1,0 +1,16 @@
+[main] INFO  com.epam.utilities.AllureReportListener  - Starting TestCaseDefault test
+[main] INFO  com.epam.utilities.AllureReportListener  - Starting TestCasefeature
+[main] INFO  com.epam.makemytriptestcasespagess.BaseClass  - ---https://www.makemytrip.com
+[main] INFO  com.epam.makemytriptestcasespagess.BaseClass  - no frame proceed
+[main] INFO  com.epam.makemytriptestcasespagess.BaseClass  - December 2019
+[main] INFO  com.epam.makemytriptestcasespagess.BaseClass  - December 2019mine
+[main] INFO  com.epam.makemytriptestcasespagess.BaseClass  - January 2020mine
+[main] INFO  com.epam.makemytriptestcasespagess.BaseClass  - February 2020mine
+[main] INFO  com.epam.makemytriptestcasespagess.BaseClass  - Economy
+[main] INFO  com.epam.makemytriptestcasespagess.BaseClass  - Premium Economy
+[main] INFO  com.epam.makemytriptestcasespagess.BaseClass  - Business
+[main] INFO  com.epam.utilities.AllureReportListener  - Testpass method
+[main] INFO  com.epam.utilities.AllureReportListener  - ScreenShot Captured For Success TestCasefeature
+[main] INFO  com.epam.makemytriptestcasespagess.BaseClass  - entered into screen
+[main] INFO  com.epam.utilities.Helper  - Screenshot Captured
+[main] INFO  com.epam.utilities.AllureReportListener  - Finishing TestCaseDefault test
