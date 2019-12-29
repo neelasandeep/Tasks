@@ -46,4 +46,7 @@ public class ConfigDataprovider {
 	public String getLogprop() {
 		return properties.getProperty("log4j");
 	}
+	public String getSelectQuery() {
+		return properties.getProperty("selectquery");
+	}
 }
