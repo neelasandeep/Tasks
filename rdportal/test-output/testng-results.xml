@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2992" started-at="2019-12-29T13:01:37 IST" finished-at="2019-12-29T13:01:40 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2992" started-at="2019-12-29T13:01:37 IST" finished-at="2019-12-29T13:01:40 IST">
+      <class name="rdportaltest.InsertTest">
+        <test-method status="PASS" signature="storeSeatInfo(java.lang.String)[pri:0, instance:rdportaltest.InsertTest@3e9b1010]" name="storeSeatInfo" duration-ms="971" started-at="2019-12-29T13:01:38 IST" data-provider="empdata" finished-at="2019-12-29T13:01:39 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sandeep%Neela%2019.0%85.0%75.0%]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- storeSeatInfo -->
+        <test-method status="PASS" signature="storeSeatInfo(java.lang.String)[pri:0, instance:rdportaltest.InsertTest@3e9b1010]" name="storeSeatInfo" duration-ms="162" started-at="2019-12-29T13:01:39 IST" data-provider="empdata" finished-at="2019-12-29T13:01:39 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prabhanjan%prab%2019.0%85.0%95.0%]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- storeSeatInfo -->
+        <test-method status="PASS" signature="storeSeatInfo(java.lang.String)[pri:0, instance:rdportaltest.InsertTest@3e9b1010]" name="storeSeatInfo" duration-ms="256" started-at="2019-12-29T13:01:39 IST" data-provider="empdata" finished-at="2019-12-29T13:01:40 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[srikala%kuna%2019.0%85.0%95.0%]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- storeSeatInfo -->
+        <test-method status="PASS" signature="storeSeatInfo(java.lang.String)[pri:0, instance:rdportaltest.InsertTest@3e9b1010]" name="storeSeatInfo" duration-ms="379" started-at="2019-12-29T13:01:40 IST" data-provider="empdata" finished-at="2019-12-29T13:01:40 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[aruna%vasam%2019.0%85.0%95.0%]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- storeSeatInfo -->
+        <test-method status="PASS" signature="storeSeatInfo(java.lang.String)[pri:0, instance:rdportaltest.InsertTest@3e9b1010]" name="storeSeatInfo" duration-ms="232" started-at="2019-12-29T13:01:40 IST" data-provider="empdata" finished-at="2019-12-29T13:01:40 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[durga%priya%2019.0%85.0%95.0%]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- storeSeatInfo -->
+        <test-method status="PASS" signature="storeSeatInfo(java.lang.String)[pri:0, instance:rdportaltest.InsertTest@3e9b1010]" name="storeSeatInfo" duration-ms="163" started-at="2019-12-29T13:01:40 IST" data-provider="empdata" finished-at="2019-12-29T13:01:40 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abhishek%abhi%2019.0%85.0%95.0%]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- storeSeatInfo -->
+      </class> <!-- rdportaltest.InsertTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

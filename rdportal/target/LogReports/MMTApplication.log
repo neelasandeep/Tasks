@@ -1,0 +1,12 @@
+[main] INFO  dbconnection.DbConnection  - connected to DATABASE..
+[main] INFO  register.RegisterEmployee  - Registration of Employee SANDEEP done
+[main] INFO  dbconnection.DbConnection  - connected to DATABASE..
+[main] INFO  register.RegisterEmployee  - Registration of Employee PRABHANJAN done
+[main] INFO  dbconnection.DbConnection  - connected to DATABASE..
+[main] INFO  register.RegisterEmployee  - Registration of Employee SRIKALA done
+[main] INFO  dbconnection.DbConnection  - connected to DATABASE..
+[main] INFO  register.RegisterEmployee  - Registration of Employee ARUNA done
+[main] INFO  dbconnection.DbConnection  - connected to DATABASE..
+[main] INFO  register.RegisterEmployee  - Registration of Employee DURGA done
+[main] INFO  dbconnection.DbConnection  - connected to DATABASE..
+[main] INFO  register.RegisterEmployee  - Registration of Employee ABHISHEK done
