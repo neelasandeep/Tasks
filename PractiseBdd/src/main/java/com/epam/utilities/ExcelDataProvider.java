@@ -39,7 +39,7 @@ public class ExcelDataProvider {
 			row = workSheet.getRow(i);
 		
 			for (int j = 0; j < row.getLastCellNum(); j++) {
-				line+=String.valueOf(row.getCell(j))+"%";
+				line=line.concat(String.valueOf(row.getCell(j))+"%");
 				
 			}
 			urlString.add(line);
