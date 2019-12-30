@@ -12,7 +12,7 @@ public class ConfigDataprovider {
 	Logger logger = Logger.getLogger(ConfigDataprovider.class);
 
 	public ConfigDataprovider() {
-		File src = new File("./configurations/Config.properties");
+		File src = new File("./src/test/resources/configurations/Config.properties");
 		try (FileInputStream fis = new FileInputStream(src);){
 			
 			properties = new Properties();
